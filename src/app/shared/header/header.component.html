@@ -1,0 +1,14 @@
+<header>
+    <a href="#atf-wrapper"><img src="./assets/img/logo.png"></a>
+    <nav>
+        <div class="nav-links">
+            <a href="#about-me" (click)="setActiveLink('about-me')" [class.active]="isActive('about-me')">About me</a>
+            <a href="#skills" (click)="setActiveLink('skills')" [class.active]="isActive('skills')">Skills</a>
+            <a href="#portfolio" (click)="setActiveLink('portfolio')" [class.active]="isActive('portfolio')">Portfolio</a>
+          </div>          
+        <div class="language-btns">
+            <button class="language-btn">DE</button>
+            <button class="language-btn active">EN</button>
+        </div>
+    </nav>
+</header>
