@@ -6,9 +6,9 @@ header {
   left: 0;
   right: 0;
   background-color: $darkblue;
-  display: flex;
+  display: $f;
   justify-content: space-between;
-  align-items: center;
+  align-items: $c;
   padding: 30px 100px;
 
   img {
@@ -18,11 +18,11 @@ header {
   }
 
   nav {
-    display: flex;
+    display: $f;
     gap: 92px;
 
     .nav-links {
-      display: flex;
+      display: $f;
       gap: 29px;
 
       a {
@@ -60,7 +60,7 @@ header {
     }
 
     .language-btns {
-      display: flex;
+      display: $f;
       gap: 14px;
 
       .language-btn {

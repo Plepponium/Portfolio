@@ -1,9 +1,5 @@
 @import "./../../styles.scss";
 
-$c: center;
-$f: flex;
-$col: column;
-
 #atf-wrapper {
   width: 100%;
   height: 100vh;
@@ -67,7 +63,7 @@ $col: column;
   position: absolute;
   left: 0;
   bottom: 50px;
-  display: flex;
+  display: $f;
   align-items: $c;
   gap: 42px;
 
