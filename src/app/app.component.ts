@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ATFComponent } from "./atf/atf.component";
 import { HeaderComponent } from './shared/header/header.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ATFComponent, HeaderComponent],
+  imports: [RouterOutlet, ATFComponent, HeaderComponent, AboutMeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

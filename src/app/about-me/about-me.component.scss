@@ -1,0 +1,60 @@
+@import "./../../styles.scss";
+
+section {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  width: 100%;
+  padding: 100px 0;
+
+  h1 {
+    font-family: $bold;
+    font-size: 90px;
+  }
+
+  .info-container,
+  .photo-container {
+    flex: 1;
+    position: relative;
+  }
+
+  .info-container {
+    .info-content {
+      max-width: 500px;
+      width: 100%;
+
+      table {
+        border-collapse: separate;
+        border-spacing: 16px 24px;
+        font-weight: normal;
+
+        td {
+          vertical-align: top;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+
+    img {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    img:nth-child(1) {
+      z-index: 2;
+    }
+
+    img:nth-child(2) {
+      z-index: 1;
+    }
+  }
+}
