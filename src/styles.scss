@@ -2,6 +2,7 @@ $w: white;
 $g: #70e61c;
 $purple: #9747ff;
 $darkblue: #141d2f;
+$lightblue: #1CDAE6;
 $regular: poppins;
 $bold: poppins-bold;
 $c: center;
@@ -41,6 +42,7 @@ button {
 }
 
 .regular-btn {
+  width: fit-content;
   padding: 15px 30px;
   font-size: 23px;
   &:hover {
@@ -48,3 +50,8 @@ button {
     background-color: $purple;
   }
 }
+
+.line {
+  height: 4px;
+}
+

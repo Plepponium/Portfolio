@@ -1,7 +1,7 @@
 @import "./../../styles.scss";
 
 section {
-  display: flex;
+  display: $f;
   justify-content: space-between;
   gap: 100px;
   width: 100%;
@@ -31,13 +31,20 @@ section {
         td {
           vertical-align: top;
           text-align: left;
+
+          img{
+            transition: transform 125ms ease-in-out;
+            &:hover{
+              transform: scale(1.5);
+            }
+          }
         }
       }
     }
   }
 
   .photo-container {
-    display: flex;
+    display: $f;
     justify-content: center;
     align-items: center;
     height: 800px;
