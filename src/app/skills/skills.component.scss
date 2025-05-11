@@ -12,10 +12,10 @@
   }
 }
 
-section {
+section#skills {
   display: $f;
   justify-content: space-between;
-  padding: 124px 0;
+  padding: 0px 100px;
   gap: 64px;
 
   .skill-img-container {
@@ -23,6 +23,7 @@ section {
     width: 700px;
     flex-wrap: wrap;
     gap: 80px;
+    z-index: 4;
 
     .skill-item {
       width: calc((100% - 3 * 80px) / 4);
@@ -54,12 +55,13 @@ section {
     display: $f;
     width: 600px;
     flex-direction: $col;
+    z-index: 4;
 
     .headline {
       display: $f;
       align-items: $c;
-      justify-content: flex-end;
-      gap: 32px;
+      // justify-content: flex-end;
+      gap: 24px;
       h1 {
         font-family: $bold;
         font-size: 90px;
@@ -71,8 +73,20 @@ section {
         background-color: $lightblue;
       }
     }
+    .description {
+      padding: 16px 0;
+      padding-right: 100px;
+    }
     .highlight {
       color: $purple;
+    }
+    h2 {
+      font-family: $bold;
+      font-size: 32px;
+    }
+    .followup {
+      padding-bottom: 24px;
+      padding-right: 100px;
     }
   }
 }
