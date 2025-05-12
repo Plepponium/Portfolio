@@ -1,0 +1,20 @@
+@import "./../../styles.scss";
+
+section#portfolio {
+  padding: 100px;
+  .headline {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    .line {
+      width: 68px;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+      background-color: $purple;
+    }
+  }
+  .description{
+    width: 473px;
+  }
+}

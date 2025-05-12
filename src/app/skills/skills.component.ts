@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 })
 export class SkillsComponent {
 
+  hoveredSkill: string | null = null;
+
   skills = [
     { image: 'html', label: 'HTML' },
     { image: 'css', label: 'CSS' },
@@ -20,7 +22,7 @@ export class SkillsComponent {
     { image: 'restapi', label: 'Rest Api' },
     { image: 'scrum', label: 'Scrum' },
     { image: 'material', label: 'Material Design' },
-    
+    { image: 'learn', label: 'Continually learning' },
   ];
 
 

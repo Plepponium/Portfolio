@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class PortfolioComponent {
 
+  projects = [
+    {image: 'elpolloloco'},
+    {image: 'join'},
+    {image: 'pokedex'},
+    {image: 'lieferando'},
+  ]
 }

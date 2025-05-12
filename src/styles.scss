@@ -2,7 +2,7 @@ $w: white;
 $g: #70e61c;
 $purple: #9747ff;
 $darkblue: #141d2f;
-$lightblue: #1CDAE6;
+$lightblue: #1cdae6;
 $regular: poppins;
 $bold: poppins-bold;
 $c: center;
@@ -30,6 +30,14 @@ body {
   color: $w;
 }
 
+h1 {
+  font-family: $bold;
+  font-size: 90px;
+  color: $w;
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
 button {
   background-color: $g;
   color: $w;
@@ -53,4 +61,3 @@ button {
 .line {
   height: 4px;
 }
-

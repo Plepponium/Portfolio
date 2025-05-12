@@ -1,1 +1,12 @@
-<p>portfolio works!</p>
+<section id="portfolio">
+    <div class="headline">
+        <div class="line"></div>
+        <h1>Portfolio</h1>
+    </div>
+    <div class="description">
+        Explore a selection of my work here - Interact with projects to see my skills in action
+    </div>
+    <div class="portfolio-item" *ngFor="let project of projects">
+        <img [src]="'./assets/img/' + project.image + '.png'" class="project">
+    </div>
+</section>
