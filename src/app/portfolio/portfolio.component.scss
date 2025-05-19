@@ -6,6 +6,7 @@ section#portfolio {
     display: flex;
     align-items: center;
     gap: 32px;
+    transform: translateX(-100px);
 
     .line {
       width: 68px;
@@ -14,7 +15,118 @@ section#portfolio {
       background-color: $purple;
     }
   }
-  .description{
+  .description {
+    margin-top: 48px;
     width: 473px;
+  }
+  .item-container {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+
+    .portfolio-item {
+      position: relative;
+      width: 601px;
+      height: 600px;
+      overflow: hidden;
+      border-radius: 15px;
+      border: 1px solid $g;
+      background: linear-gradient(45deg, #000000 0%, $darkblue 30%);
+
+      .image-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 125ms ease;
+        }
+      }
+      .project-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(0);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 96px;
+        opacity: 0;
+        transition: opacity 125ms ease;
+
+        .buttons {
+          display: flex;
+          justify-content: space-evenly;
+
+          .btn {
+            padding: 15px 30px;
+            font-size: 23px;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            transition: all 125ms ease-in-out;
+          }
+
+          .github {
+            border: 1px solid $lightblue;
+            &:hover{
+              background-color: $lightblue;
+            }
+          }
+          .live-test{
+            background-color: $purple;
+          &:hover{
+            background-color: $g;
+          }
+          }
+        }
+
+        .info {
+          background-color: white;
+          height: 300px;
+          padding: 0 25px;
+          border-radius: 30px 30px 0 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+
+          h2 {
+            font-family: $bold;
+            font-size: 32px;
+            color: $purple;
+          }
+
+          p {
+            font-size: 23px;
+            color: black;
+          }
+
+          .tech {
+            font-size: 23px;
+            color: $g;
+          }
+        }
+      }
+
+      &:hover {
+        .image-wrapper img {
+          transform: scale(2);
+        }
+
+        .project-overlay {
+          opacity: 100%;
+          background-color: rgba($color: #000000, $alpha: 0.5);
+        }
+      }
+    }
   }
 }
