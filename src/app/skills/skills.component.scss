@@ -28,6 +28,7 @@ section#skills {
   justify-content: space-between;
   padding: 0px 100px;
   gap: 64px;
+  scroll-margin-top: 150px;
 
   .skill-img-container {
     display: $f;
@@ -79,11 +80,12 @@ section#skills {
     width: 600px;
     flex-direction: $col;
     z-index: 1;
+    transform: translateX(100px);
 
     .headline {
       display: $f;
       align-items: $c;
-      // justify-content: flex-end;
+      justify-content: space-between;
       gap: 24px;
       h1 {
         font-family: $bold;

@@ -1,0 +1,39 @@
+<section id="contact">
+    <div class="headline">
+        <h1>Contact</h1>
+        <div class="line"></div>
+    </div>
+    <div class="contact-content">
+        <div class="text">
+            <div class="text-headline">
+                <div class="line"></div>
+                <h2>Got a problem to solve?</h2>
+            </div>
+            <p>I'm excited to bring value to your projects through my work—feel free to reach out if you're looking for
+                a
+                dedicated team member, especially in a front-end or creative development role. <br>
+                Need a Frontend developer? <span>Contact me!</span>
+            </p>
+        </div>
+        <div class="form-container">
+            <form (ngSubmit)="onSubmit(contactform)" #contactform="ngForm">
+                <label for="name">Name</label>
+                <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name..."
+                    required>
+
+                <label for="email">E-Mail</label>
+                <input [(ngModel)]="contactData.email" type="email" name="email" id="email" placeholder="Your mail..."
+                    required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+
+                <label for="message">Subject</label>
+                <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" id="message"
+                    placeholder="Write something..." required></textarea>
+                @if(!message.valid && message.touched){
+                <span>Please enter a message</span>
+                }
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+</section>

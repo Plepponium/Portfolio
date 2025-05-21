@@ -1,12 +1,16 @@
 @import "./../../styles.scss";
 
 section#portfolio {
+  position: relative;
   padding: 100px;
+  overflow: hidden;
+
   .headline {
     display: flex;
     align-items: center;
     gap: 32px;
     transform: translateX(-100px);
+    margin-top: 16px;
 
     .line {
       width: 68px;
@@ -128,5 +132,18 @@ section#portfolio {
         }
       }
     }
+  }
+
+  img.shadow-blue{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(350px);
+  }
+  img.shadow-green{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-550px) translateY(150px);
   }
 }

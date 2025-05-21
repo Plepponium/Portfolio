@@ -6,10 +6,11 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { TransitionImageComponent } from './transition-image/transition-image.component';
+import { ContactformComponent } from './contactform/contactform.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ATFComponent, HeaderComponent, AboutMeComponent,TransitionImageComponent, SkillsComponent, PortfolioComponent],
+  imports: [RouterOutlet, ATFComponent, HeaderComponent, AboutMeComponent,TransitionImageComponent, SkillsComponent, PortfolioComponent, ContactformComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
