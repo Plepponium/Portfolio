@@ -63,8 +63,16 @@ section#contact {
             font-family: poppins;
           }
           &:hover {
-            cursor: pointer;
-            border: 1px solid $lightblue;
+            border-color: $lightblue;
+          }
+          &.ng-invalid.ng-touched {
+            border-color: $r;
+          }
+          &.ng-valid.ng-touched {
+            border-color: $g;
+          }
+          &.ng-untouched {
+            border-color: $purple;
           }
         }
 
@@ -93,8 +101,22 @@ section#contact {
           &:hover {
             transform: scale(1.1);
           }
+          &:disabled, &[disabled]{
+            background-color: $grey;
+            pointer-events: none;
+            &:hover{
+              transform: none;
+            }
+          }
         }
       }
     }
   }
+}
+
+.invalid {
+  color: $r;
+  font-size: 14px;
+  margin-top: 4px;
+  display: block;
 }
