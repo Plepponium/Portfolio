@@ -2,17 +2,99 @@
 
 section#contact {
   padding: 100px;
+  padding-top: 20px;
   .headline {
-    display: flex;
-    align-items: center;
+    display: $f;
+    align-items: $c;
     justify-content: flex-end;
     transform: translateX(100px);
     gap: 32px;
+    margin-bottom: 16px;
     .line {
       width: 500px;
       border-top-left-radius: 2px;
       border-bottom-left-radius: 2px;
       background-color: $g;
+    }
+  }
+  .contact-content {
+    display: $f;
+    gap: 160px;
+    .text {
+      flex: 1;
+      p {
+        span {
+          font-family: $bold;
+        }
+      }
+      .text-headline {
+        display: $f;
+        align-items: $c;
+        transform: translateX(-100px);
+        gap: 32px;
+        .line {
+          width: 68px;
+          border-top-right-radius: 2px;
+          border-bottom-right-radius: 2px;
+          background-color: $lightblue;
+        }
+      }
+    }
+    .form-container {
+      flex: 1;
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        input,
+        textarea {
+          background-color: $darkblue;
+          border: 1px solid $purple;
+          border-radius: 10px;
+          padding: 15px 25px;
+          color: $w;
+          font-size: 16px;
+          line-height: 120%;
+          letter-spacing: 0;
+
+          &::placeholder {
+            color: $w;
+            font-family: poppins;
+          }
+          &:hover {
+            cursor: pointer;
+            border: 1px solid $lightblue;
+          }
+        }
+
+        textarea {
+          resize: none;
+          height: 202px;
+        }
+
+        .agree {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          p {
+            font-size: 14px;
+            a {
+              text-decoration: none;
+              color: $purple;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        .regular-btn {
+          align-self: center;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
     }
   }
 }
