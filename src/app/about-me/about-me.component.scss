@@ -28,9 +28,11 @@ section#about-me {
           text-align: left;
 
           img {
+            transform: scale(0.7);
             transition: transform 125ms ease-in-out;
+            
             &:hover {
-              transform: scale(1.5);
+              transform: scale(1);
             }
           }
         }

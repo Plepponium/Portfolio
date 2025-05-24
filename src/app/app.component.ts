@@ -7,10 +7,11 @@ import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { TransitionImageComponent } from './transition-image/transition-image.component';
 import { ContactformComponent } from './contactform/contactform.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ATFComponent, HeaderComponent, AboutMeComponent,TransitionImageComponent, SkillsComponent, PortfolioComponent, ContactformComponent],
+  imports: [RouterOutlet, ATFComponent, HeaderComponent, AboutMeComponent,TransitionImageComponent, SkillsComponent, PortfolioComponent, ContactformComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
