@@ -30,6 +30,15 @@ body {
   font-family: $regular;
   background-color: $darkblue;
   color: $w;
+  display: $f;
+  flex-direction: $col;
+  height: 100%;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1 {

@@ -1,9 +1,11 @@
 @import "./../../styles.scss";
 
 section#contact {
-  padding: 100px;
-  padding-top: 20px;
+  padding: 200px 100px 200px;
   scroll-margin-top: 100px;
+  position: relative;
+  overflow: hidden;
+
   .headline {
     display: $f;
     align-items: $c;
@@ -63,9 +65,7 @@ section#contact {
             color: $w;
             font-family: poppins;
           }
-          &:hover {
-            border-color: $lightblue;
-          }
+
           &.ng-invalid.ng-touched {
             border-color: $r;
           }
@@ -74,6 +74,9 @@ section#contact {
           }
           &.ng-untouched {
             border-color: $purple;
+          }
+          &:hover {
+            border-color: $lightblue;
           }
         }
 
@@ -145,6 +148,36 @@ section#contact {
         }
       }
     }
+  }
+
+  .go-up-btn {
+    position: absolute;
+    bottom: 48px;
+    right: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    img {
+      width: 48px;
+      height: 48px;
+      transition: filter 125ms ease-in-out;
+
+      &:hover {
+        filter: invert(0) sepia(94%) saturate(7454%) hue-rotate(33deg)
+          brightness(93%) contrast(94%);
+      }
+    }
+  }
+
+  img#shadow{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(300px) translateY(-32px);
+    z-index: -1;
   }
 }
 

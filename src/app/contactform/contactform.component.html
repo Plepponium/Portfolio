@@ -1,57 +1,68 @@
 <section id="contact">
+    <img src="./assets/img/shadow_contact.png" id="shadow">
     <div class="headline">
-        <h1>Contact</h1>
+        <h1>{{ 'contact.headline' | translate }}</h1>
         <div class="line"></div>
     </div>
     <div class="contact-content">
         <div class="text">
             <div class="text-headline">
                 <div class="line"></div>
-                <h2>Got a problem to solve?</h2>
+                <h2>{{ 'contact.problemHeadline' | translate }}</h2>
             </div>
-            <p><br>I'm excited to bring value to your projects through my work—feel free to reach out if you're looking
-                for
-                a
-                dedicated team member, especially in a front-end or creative development role. <br>
-                <br>Need a Frontend developer? <span>Contact me!</span>
+            <p>
+                <br>
+                {{ 'contact.introText' | translate }}
+                <br>
+                <br>
+                {{ 'contact.needDev' | translate }}
+                <span>{{ 'contact.contactMe' | translate }}</span>
             </p>
         </div>
         <div class="form-container">
             <form (ngSubmit)="onSubmit(contactform)" #contactform="ngForm">
                 <label for="name"></label>
                 <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
-                    placeholder="Your name" required pattern="^[a-zA-Z]+ [a-zA-Z]+$">
+                    placeholder="{{ 'contact.form.namePlaceholder' | translate }}" required
+                    pattern="^[a-zA-Z]+ [a-zA-Z]+$">
                 @if(!name.valid && name.touched){
-                <span class="invalid">Please enter your first name and last name</span>
+                <span class="invalid">{{ 'contact.form.nameError' | translate }}</span>
                 }
 
                 <label for="email"></label>
                 <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" id="email"
-                    placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    placeholder="{{ 'contact.form.emailPlaceholder' | translate }}" required
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                 @if(!email.valid && email.touched){
-                <span class="invalid">Please enter a valid e-mail adress</span>
+                <span class="invalid">{{ 'contact.form.emailError' | translate }}</span>
                 }
 
                 <label for="message"></label>
                 <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" id="message"
-                    placeholder="Your message" required></textarea>
+                    placeholder="{{ 'contact.form.messagePlaceholder' | translate }}" required></textarea>
                 @if(!message.valid && message.touched){
-                <span class="invalid">Please enter your message</span>
+                <span class="invalid">{{ 'contact.form.messageError' | translate }}</span>
                 }
                 <div class="agree">
                     <input #checkbox="ngModel" type="checkbox" name="checkbox" id="checkbox"
                         [(ngModel)]="contactData.checkbox" required>
                     <label for="checkbox" class="custom-checkbox"></label>
                     <p>
-                        I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined
+                        {{ 'contact.form.privacyTextPart1' | translate }}
+                        <a href="imprint">{{ 'contact.form.privacyLinkText' | translate }}</a>
+                        {{ 'contact.form.privacyTextPart2' | translate }}
                     </p>
                 </div>
                 @if(!checkbox.valid && checkbox.touched){
-                <span class="invalid">Please agree to the privacy policy </span>
+                <span class="invalid">{{ 'contact.form.privacyError' | translate }}</span>
                 }
-                <button class="regular-btn" type="submit" [disabled]="!contactform.valid">Send message :)</button>
+                <button class="regular-btn" type="submit" [disabled]="!contactform.valid">{{ 'contact.form.submitBtn' |
+                    translate }}</button>
             </form>
         </div>
     </div>
+    <a href="#atf-wrapper" class="go-up-btn">
+        <img src="./assets/img/go-up.png">
+    </a>
 
 </section>

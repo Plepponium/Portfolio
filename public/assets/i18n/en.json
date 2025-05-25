@@ -1,0 +1,64 @@
+{
+  "header": {
+    "aboutMe": "About me",
+    "skills": "Skills",
+    "portfolio": "Portfolio"
+  },
+  "atf": {
+    "intro": "I am",
+    "headline": "Developer",
+    "button": "Let's talk!",
+    "vertical": "Scroll down"
+  },
+  "about": {
+    "headline": "About me",
+    "introductionText": "A good friend noticed my passion for all things tech and pushed me to give coding a shot – turns out, solving problems with code feels like working on a never-ending puzzle, and I love it. The constant evolution in tech keeps me curious and challenged every single day.\n\nLet’s connect and create something amazing together!",
+    "locationText": "Based in Baden-Württemberg – I'm open to remote work, but not looking to relocate.",
+    "learningText": "I'm always curious to explore new technologies and love pushing my skills to the next level.",
+    "solvingText": "When tackling problems, I usually start by experimenting and refining my approach. While I often work analytically on my own, I’m always open to collaborating with others when a challenge goes beyond my skill set. I believe in a mix of planning and hands-on problem solving to find the most effective solutions."
+  },
+  "skills": {
+    "headline": "Skills",
+    "description": "I have gained valuable experience working on a variety of projects using modern front-end technologies like HTML, CSS, and JavaScript. I’m always open to learning and adapting to new tools and frameworks. I believe that continuous learning is key to keeping up with the fast-paced world of web development.",
+    "subheadline": "Looking for ",
+    "highlight": "another skill",
+    "followup": "I'm always eager to explore new technologies and frameworks to expand my capabilities.",
+    "button": "Get in touch"
+  },
+  "portfolio": {
+    "description": "Explore a selection of my work here – Interact with projects to see my skills in action",
+    "projects": {
+      "elpollo": {
+        "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+      },
+      "join": {
+        "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      }
+    }
+  },
+  "contact": {
+    "headline": "Contact",
+    "problemHeadline": "Got a problem to solve?",
+    "introText": "I'm excited to bring value to your projects through my work—feel free to reach out if you're looking for a dedicated team member, especially in a front-end or creative development role.",
+    "needDev": "Need a Frontend developer?",
+    "contactMe": "Contact me!",
+
+    "form": {
+      "namePlaceholder": "Your name",
+      "nameError": "Please enter your first name and last name",
+
+      "emailPlaceholder": "Your email",
+      "emailError": "Please enter a valid e-mail address",
+
+      "messagePlaceholder": "Your message",
+      "messageError": "Please enter your message",
+
+      "privacyTextPart1": "I've read the",
+      "privacyLinkText": "privacy policy",
+      "privacyTextPart2": "and agree to the processing of my data as outlined",
+      "privacyError": "Please agree to the privacy policy",
+
+      "submitBtn": "Send message :)"
+    }
+  }
+}
