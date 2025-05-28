@@ -1,7 +1,7 @@
 $w: white;
 $g: #70e61c;
-$r: #E61C40;
-$grey: #B6B6B6;
+$r: #e61c40;
+$grey: #b6b6b6;
 $purple: #9747ff;
 $darkblue: #141d2f;
 $lightblue: #1cdae6;
@@ -10,6 +10,9 @@ $bold: poppins-bold;
 $c: center;
 $f: flex;
 $col: column;
+$breakpoint-desktop: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
 
 @font-face {
   font-family: $regular;
@@ -33,6 +36,10 @@ body {
   display: $f;
   flex-direction: $col;
   height: 100%;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 app-root {
@@ -78,4 +85,29 @@ button {
 
 .line {
   height: 4px;
+}
+
+/* Ab 481 px: Tablets im Hochformat */
+@media (min-width: 481px) {
+  body {
+  }
+}
+
+
+/* Ab 1024 px: Kleine Laptops */
+@media (min-width: $breakpoint-desktop) {
+  body {
+  }
+}
+
+/* Ab 1280 px: Standard-Desktops */
+@media (min-width: 1280px) {
+  body {
+  }
+}
+
+/* Ab 1920 px: Full-HD-Monitore */
+@media (min-width: 1920px) {
+  body {
+  }
 }

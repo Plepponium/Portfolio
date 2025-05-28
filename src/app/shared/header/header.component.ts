@@ -1,35 +1,29 @@
 import { Component } from '@angular/core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @Component({
   selector: 'app-header',
-  imports: [TranslateModule],
+  imports: [TranslateModule, NavigationComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  overlayOpen = false;
 
-  currentLang = 'en';
+  toggleOverlay(): void {
+    this.overlayOpen = !this.overlayOpen;
 
-  constructor(private translate: TranslateService) {
-    this.currentLang = this.translate.currentLang || 'en';
+    if (this.overlayOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
   }
 
-  switchLanguage(lang: string) {
-    this.translate.use(lang);
-    this.currentLang = lang;
-    localStorage.setItem('lang', lang);
+  closeOverlay(): void {
+    this.overlayOpen = false;
+    document.body.classList.remove('no-scroll');
   }
 
-
-
-  activeLink: string = '';
-
-  setActiveLink(linkId: string) {
-    this.activeLink = linkId;
-  }
-
-  isActive(linkId: string): boolean {
-    return this.activeLink === linkId;
-  }
 }

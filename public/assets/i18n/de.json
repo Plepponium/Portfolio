@@ -2,7 +2,8 @@
   "header": {
     "aboutMe": "Über mich",
     "skills": "Fähigkeiten",
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "contact": "Kontakt"
   },
   "atf": {
     "intro": "Ich bin",
