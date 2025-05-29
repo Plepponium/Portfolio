@@ -7,7 +7,7 @@
   justify-content: $c;
   align-items: $c;
   gap: 35px;
-  padding: 0 clamp(16px, 8vw, 100px);
+  padding: 0 $padding-lr;
 
   .left,
   .right {
@@ -88,7 +88,33 @@
   right: 0;
 }
 
+@media (max-width: $breakpoint-tablet) {
+  .left,
+  .right {
+    width: 350px;
+    height: auto;
+  }
+  .left {
+    top: 250px;
+    left: -100px;
+  }
+  .right {
+    bottom: 100px;
+    right: -100px;
+  }
+  #scroll-btn {
+    display: none;
+  }
+}
+
 @media (max-width: $breakpoint-mobile) {
+  .left,
+  .right {
+    width: 300px;
+  }
+  .right {
+    right: -50px;
+  }
   .atf-header {
     flex-direction: column;
     span {
@@ -97,8 +123,5 @@
   }
   .regular-btn {
     font-size: 19px;
-  }
-  #scroll-btn {
-    display: none;
   }
 }

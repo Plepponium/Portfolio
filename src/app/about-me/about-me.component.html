@@ -1,26 +1,29 @@
 <section id="about-me">
-    <div class="info-container">
-        <h1>{{'about.headline' | translate}}</h1>
-        <div class="info-content">
-            <span style="white-space: pre-line;">{{ 'about.introductionText' | translate }}</span>
-            <table>
-                <tr>
-                    <td><img src="./assets/img/location.png"></td>
-                    <td>{{ 'about.locationText' | translate }}</td>
-                </tr>
-                <tr>
-                    <td><img src="./assets/img/bulb.png"></td>
-                    <td>{{ 'about.learningText' | translate }}</td>
-                </tr>
-                <tr>
-                    <td><img src="./assets/img/puzzle.png"></td>
-                    <td>{{ 'about.solvingText' | translate }}</td>
-                </tr>
-            </table>
+    <div class="about-wrapper">
+        <div class="info-container">
+            <h1>{{ 'about.headline' | translate }}</h1>
+            <div class="info-content">
+                <span style="white-space: pre-line;">{{ 'about.introductionText' | translate }}</span>
+                <table>
+                    <tr>
+                        <td><img src="./assets/img/location.png"></td>
+                        <td class="va-middle">{{ 'about.locationText' | translate }}</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./assets/img/bulb.png"></td>
+                        <td class="va-middle">{{ 'about.learningText' | translate }}</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./assets/img/puzzle.png"></td>
+                        <td class="va-middle">{{ 'about.solvingText' | translate }}</td>
+                    </tr>
+                </table>
+            </div>
         </div>
-    </div>
-    <div class="photo-container">
-        <img src="./assets/img/photo.png">
-        <img src="./assets/img/shadows_photo.png">
+
+        <div class="photo-container">
+            <img src="./assets/img/photo.png" />
+            <img src="./assets/img/shadows_photo.png" />
+        </div>
     </div>
 </section>

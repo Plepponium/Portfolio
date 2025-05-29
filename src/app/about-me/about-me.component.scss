@@ -1,33 +1,50 @@
 @import "./../../styles.scss";
 
 section#about-me {
-  display: $f;
-  justify-content: space-between;
-  gap: 100px;
-  padding: 100px;
+  padding: $padding-lr;
   position: relative;
-  scroll-margin-top: 50px;
+  scroll-margin-top: 70px;
+
+  .about-wrapper {
+    display: $f;
+    justify-content: space-between;
+    max-width: $breakpoint-FHD;
+    margin: 0 auto;
+    width: 100%;
+  }
 
   .info-container,
   .photo-container {
     flex: 1;
-    position: relative;
   }
 
   .info-container {
+    z-index: 1;
+    h1 {
+      font-size: clamp(36px, 5vw, 90px);
+    }
     .info-content {
-      max-width: 500px;
+      max-width: 800px;
       width: 100%;
       margin-top: 16px;
 
+      span {
+        font-size: clamp(14px, 1.8vw, 16px);
+      }
+
       table {
         border-collapse: separate;
-        border-spacing: 16px 24px;
+        border-spacing: clamp(8px, 2vw, 16px) clamp(12px, 3vw, 24px);
         font-weight: normal;
+
+        .va-middle {
+          vertical-align: middle;
+        }
 
         td {
           vertical-align: top;
           text-align: left;
+          font-size: clamp(14px, 1.8vw, 16px);
 
           img {
             transition: transform 125ms ease-in-out;
@@ -41,24 +58,46 @@ section#about-me {
   }
 
   .photo-container {
-    display: $f;
-    justify-content: center;
+    position: relative;
+    display: flex;
     align-items: center;
+    justify-content: center;
     height: 800px;
 
-    img {
-      position: absolute;
-      top: 0;
-      height: 100%;
-      object-fit: cover;
-    }
-
     img:nth-child(1) {
+      position: relative;
       z-index: 0;
+      max-width: 100%;
+      height: auto;
     }
 
     img:nth-child(2) {
+      position: absolute;
       z-index: -1;
+      bottom: -100px;
+      height: 100%;
+      transform: translateX(-30px);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-desktop) {
+  section#about-me {
+    .about-wrapper {
+      flex-direction: column;
+      justify-content: center;
+      gap: 70px;
+
+      .info-container,
+      .photo-container {
+        flex: unset;
+        width: 100%;
+      }
+
+      .photo-container {
+        order: -1;
+        height: auto;
+      }
     }
   }
 }

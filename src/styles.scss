@@ -10,11 +10,11 @@ $bold: poppins-bold;
 $c: center;
 $f: flex;
 $col: column;
+$padding-lr: clamp(16px, 8vw, 100px);
 $breakpoint-FHD: 1920px;
 $breakpoint-desktop: 1024px;
 $breakpoint-tablet: 768px;
 $breakpoint-mobile: 480px;
-
 
 @font-face {
   font-family: $regular;
@@ -94,7 +94,6 @@ button {
   body {
   }
 }
-
 
 /* Ab 1024 px: Kleine Laptops */
 @media (min-width: $breakpoint-desktop) {
