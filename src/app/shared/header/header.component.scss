@@ -6,29 +6,34 @@ header {
   left: 0;
   right: 0;
   background-color: $darkblue;
-  display: $f;
-  justify-content: space-between;
-  align-items: $c;
-  padding: 30px 100px;
   z-index: 999;
 
-  img {
-    width: 150px;
-    height: 50px;
-    object-fit: cover;
-  }
+  .header-content {
+    max-width: $breakpoint-FHD;
+    margin: 0 auto;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  .burger {
-    display: none;
-    text-align: center;
-    font-size: 60px;
-    color: $w;
-    cursor: pointer;
-  }
+    a img {
+      width: 150px;
+      height: 50px;
+      object-fit: cover;
+    }
 
-  .desktop-nav {
-    display: $f;
-    gap: 64px;
+    .burger {
+      display: none;
+      text-align: center;
+      font-size: 60px;
+      color: $w;
+      cursor: pointer;
+    }
+
+    .desktop-nav {
+      display: flex;
+      gap: 64px;
+    }
   }
 }
 
@@ -58,23 +63,27 @@ header {
 }
 
 @media (max-width: $breakpoint-desktop) {
-  .desktop-nav {
-    display: none !important;
-  }
-  header {
+  header .header-content {
     padding: 15px 50px;
+
     .burger {
       display: block;
     }
+
+    .desktop-nav {
+      display: none !important;
+    }
   }
+
   .overlay {
-    display: $f;
+    display: flex;
   }
 }
 
 @media (max-width: $breakpoint-mobile) {
-  header {
+  header .header-content {
     padding: 15px;
+
     .burger {
       font-size: 40px;
     }

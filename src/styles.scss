@@ -10,9 +10,11 @@ $bold: poppins-bold;
 $c: center;
 $f: flex;
 $col: column;
+$breakpoint-FHD: 1920px;
 $breakpoint-desktop: 1024px;
 $breakpoint-tablet: 768px;
 $breakpoint-mobile: 480px;
+
 
 @font-face {
   font-family: $regular;

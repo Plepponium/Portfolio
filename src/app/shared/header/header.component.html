@@ -1,13 +1,13 @@
 <header>
-
-    <a href="#above-the-fold" (click)="closeOverlay()"><img src="./assets/img/logo.png"></a>
+  <div class="header-content">
+    <a href="#above-the-fold" (click)="closeOverlay()">
+      <img src="./assets/img/logo.png" />
+    </a>
     <app-navigation class="desktop-nav" [isMobile]="false"></app-navigation>
-
     <div class="burger" (click)="toggleOverlay()">
-        {{ overlayOpen ? '✕' : '☰' }}
+      {{ overlayOpen ? '✕' : '☰' }}
     </div>
-
-
+  </div>
 </header>
 
 <div class="overlay" [class.open]="overlayOpen">
