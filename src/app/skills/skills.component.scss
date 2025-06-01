@@ -23,36 +23,45 @@
   }
 }
 
-section#skills {
-  display: $f;
+@import "./../../styles.scss";
+
+#skills {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0px 100px;
-  gap: 64px;
+  align-items: flex-start;
+  padding: 32px 100px 0;
   scroll-margin-top: 150px;
 
   .skill-img-container {
-    display: $f;
-    width: 700px;
+    order: 1;
+    width: 60%;
+    gap: 40px;
+    display: flex;
     flex-wrap: wrap;
-    gap: 80px;
     z-index: 1;
+    transform: translateY(40px);
 
     .skill-item {
-      width: calc((100% - 3 * 80px) / 4);
-      display: $f;
-      flex-direction: $col;
-      align-items: $c;
-      text-align: $c;
-      padding-top: 12px;
-      word-wrap: break-word;
+      width: calc((100% - 3 * 40px) / 4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: white;
       position: relative;
 
       img.skill {
         object-fit: contain;
+        border-radius: 4px;
+        width: 100%;
+        max-width: 60px;
+        max-height: 60px;
 
         &:hover {
           animation: bounce 0.6s ease-in;
         }
+
         &.no-hover:hover {
           animation: none;
         }
@@ -62,53 +71,125 @@ section#skills {
         font-family: $bold;
         margin-top: 10px;
         font-size: 16px;
-        width: 100px;
       }
-    }
-    .speech-bubble {
-      position: absolute;
-      top: -100px;
-      left: 10px;
-      z-index: 2;
-      pointer-events: none;
-      animation: fadeIn 125ms ease-in-out;
+
+      .speech-bubble {
+        position: absolute;
+        width: 120%;
+        top: -100%;
+        left: 10%;
+        z-index: 2;
+        pointer-events: none;
+        animation: fadeIn 125ms ease-in-out;
+      }
     }
   }
 
   .skill-text-container {
-    display: $f;
-    width: 600px;
-    flex-direction: $col;
+    order: 2;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: white;
     z-index: 1;
-    transform: translateX(100px);
+    transform: translateY(40px);
 
     .headline {
-      display: $f;
-      align-items: $c;
-      justify-content: space-between;
-      gap: 24px;
+      display: flex;
+      align-items: center;
+
       h1 {
         font-family: $bold;
-        font-size: 90px;
+        font-size: clamp(36px, 5vw, 90px);
       }
+
       .line {
-        width: 287px;
-        border-top-left-radius: 2px;
-        border-bottom-left-radius: 2px;
+        width: 100%;
         background-color: $lightblue;
+        border-bottom-left-radius: 2px;
+        border-top-left-radius: 2px;
+        transform: translateX(100px);
       }
     }
+
     .description {
-      padding: 16px 0;
-      padding-right: 100px;
+      font-size: 16px;
     }
+  }
+
+  .skill-followup-container {
+    order: 3;
+    width: 35%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: white;
+
+    h2 {
+      font-size: 24px;
+    }
+
     .highlight {
       color: $purple;
     }
 
     .followup {
-      padding-bottom: 24px;
-      padding-right: 100px;
+      font-size: 16px;
+    }
+
+    .regular-btn {
+      align-self: flex-start;
+      margin-top: 16px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-desktop) {
+  #skills {
+    flex-direction: column;
+    align-items: center;
+    padding: 32px $padding-lr 0;
+
+    .skill-img-container {
+      order: 2;
+      width: 100%;
+      transform: none;
+    }
+
+    .skill-text-container {
+      order: 1;
+      width: 100%;
+      margin-bottom: 32px;
+      transform: none;
+      .headline {
+        gap: 24px;
+        .line {
+          transform: none;
+        }
+      }
+    }
+
+    .skill-followup-container {
+      order: 3;
+      width: 100%;
+      margin-top: 32px;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .regular-btn {
+    font-size: 19px;
+  }
+
+  #skills {
+    .skill-img-container {
+      .skill-item {
+        width: calc((100% - 2 * 40px) / 3);
+      }
     }
   }
 }

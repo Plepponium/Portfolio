@@ -1,4 +1,5 @@
 <section id="skills">
+
   <div class="skill-img-container">
     <div class="skill-item" *ngFor="let skill of skills" (mouseenter)="hoveredSkill = skill.image"
       (mouseleave)="hoveredSkill = null">
@@ -8,24 +9,25 @@
       <div *ngIf="skill.image === 'learn' && hoveredSkill === 'learn'" class="speech-bubble">
         <img src="./assets/img/speechbubble.png" />
       </div>
-
-
     </div>
-
   </div>
+
   <div class="skill-text-container">
     <div class="headline">
       <h1>{{ 'skills.headline' | translate }}</h1>
       <div class="line"></div>
     </div>
+    <p class="description">{{ 'skills.description' | translate }}</p>
+  </div>
 
-    <p class="description">
-      {{ 'skills.description' | translate }}</p>
 
-    <h2>{{'skills.subheadline' | translate}}<span class='highlight'>{{'skills.highlight' | translate}}</span>?</h2>
 
+  <div class="skill-followup-container">
+    <h2>
+      {{ 'skills.subheadline' | translate }}
+      <span class="highlight">{{ 'skills.highlight' | translate }}</span>?
+    </h2>
     <p class="followup">{{ 'skills.followup' | translate }}</p>
-
     <a href="#contact"><button class="regular-btn">{{ 'skills.button' | translate }}</button></a>
   </div>
 </section>
