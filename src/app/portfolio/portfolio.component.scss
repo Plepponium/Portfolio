@@ -162,13 +162,15 @@ section#portfolio {
 
 @media (max-width: $breakpoint-tablet) {
   section#portfolio {
-    padding: 80px 16px 150px;
+    padding: 80px 15px 80px;
+    scroll-margin-top: 100px !important;
     .headline {
       transform: translateX(-16px);
     }
     .description {
       font-size: 14px;
       width: 90%;
+      margin-top: 32px;
     }
 
     .item-container {

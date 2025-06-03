@@ -1,7 +1,7 @@
 <footer id="footer">
     <div class="legal-logo">
         <a href="#atf-wrapper"><img src="./assets/img/logo.png"></a>
-        <a class="legal-link" href="imprint">Legal Notice</a>
+        <a class="legal-link" href="imprint" *ngIf="!isMobile">Legal Notice</a>
     </div>
     <div class="copyright">
         <p>© Adrian Kleinschmidt 2025</p>
@@ -10,4 +10,5 @@
         <a href="https://github.com/Plepponium" target="_blank"><img src="./assets/img/github.png"></a>
         <a href="#contact"><img src="./assets/img/mail.png"></a>
     </div>
+    <a class="legal-link" href="imprint" *ngIf="isMobile">Legal Notice</a>
 </footer>

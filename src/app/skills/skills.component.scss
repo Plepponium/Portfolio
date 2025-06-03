@@ -25,7 +25,7 @@
 
 @import "./../../styles.scss";
 
-#skills {
+section#skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -147,10 +147,10 @@
 }
 
 @media (max-width: $breakpoint-desktop) {
-  #skills {
+  section#skills {
     flex-direction: column;
     align-items: center;
-    padding: 32px $padding-lr 0;
+    padding: 32px 30px 40px;
 
     .skill-img-container {
       order: 2;
@@ -166,7 +166,7 @@
       .headline {
         gap: 24px;
         .line {
-          transform: none;
+          transform: translateX(30px);
         }
       }
     }
@@ -185,10 +185,19 @@
     font-size: 19px;
   }
 
-  #skills {
+  section#skills {
+    padding: 80px 15px 15px;
+    scroll-margin-top: 40px;
     .skill-img-container {
       .skill-item {
         width: calc((100% - 2 * 40px) / 3);
+      }
+    }
+    .skill-text-container {
+      .headline {
+        .line {
+          transform: translateX(15px);
+        }
       }
     }
   }
