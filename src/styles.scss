@@ -88,27 +88,3 @@ button {
 .line {
   height: 4px;
 }
-
-/* Ab 481 px: Tablets im Hochformat */
-@media (min-width: 481px) {
-  body {
-  }
-}
-
-/* Ab 1024 px: Kleine Laptops */
-@media (min-width: $breakpoint-desktop) {
-  body {
-  }
-}
-
-/* Ab 1280 px: Standard-Desktops */
-@media (min-width: 1280px) {
-  body {
-  }
-}
-
-/* Ab 1920 px: Full-HD-Monitore */
-@media (min-width: 1920px) {
-  body {
-  }
-}

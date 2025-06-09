@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
@@ -5,7 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contactform',
-  imports: [FormsModule, TranslateModule],
+  imports: [FormsModule, TranslateModule, CommonModule],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })
@@ -19,6 +20,18 @@ export class ContactformComponent {
     message: "",
     checkbox: false,
   }
+
+  nameTouched = {
+    name: false,
+    email: false,
+    message: false
+  };
+
+  markAsTouched(field: keyof typeof this.nameTouched) {
+    this.nameTouched[field] = true;
+  }
+
+
 
   mailTest = true;
 

@@ -60,33 +60,64 @@ section#contact {
         flex-direction: column;
         gap: 16px;
 
-        input,
-        textarea {
-          background-color: $darkblue;
-          border: 1px solid $purple;
-          border-radius: 10px;
-          padding: 15px 25px;
-          color: $w;
-          font-size: 16px;
-          line-height: 120%;
-          letter-spacing: 0;
+        .input-group {
+          position: relative;
 
-          &::placeholder {
+          input,
+          textarea {
+            width: 100%;
+            box-sizing: border-box;
+            background-color: $darkblue;
+            border: 1px solid $purple;
+            border-radius: 10px;
+            padding: 15px 45px 15px 25px;
             color: $w;
-            font-family: poppins;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: 0;
+
+            &::placeholder {
+              color: $w;
+              font-family: poppins;
+            }
+
+            &:hover {
+              border-color: $lightblue;
+            }
+
+            &:-webkit-autofill {
+              box-shadow: 0 0 0px 1000px $darkblue inset !important;
+              -webkit-text-fill-color: $w !important;
+              transition: background-color 5000s ease-in-out 0s;
+              caret-color: $w;
+              border: 1px solid $purple !important;
+            }
+
+            &:-moz-autofill {
+              box-shadow: 0 0 0px 1000px $darkblue inset;
+              -moz-text-fill-color: $w !important;
+              caret-color: $w;
+            }
+
+            &.valid {
+              border-color: $g !important;
+            }
+
+            &.invalid {
+              border-color: $r;
+            }
           }
 
-          &.ng-invalid.ng-touched {
-            border-color: $r;
-          }
-          &.ng-valid.ng-touched {
-            border-color: $g;
-          }
-          &.ng-untouched {
-            border-color: $purple;
-          }
-          &:hover {
-            border-color: $lightblue;
+          .status-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            pointer-events: none;
+
+            img {
+              width: 20px;
+              height: 20px;
+            }
           }
         }
 
@@ -140,6 +171,7 @@ section#contact {
             }
           }
         }
+
         .regular-btn {
           align-self: center;
           &:hover {
@@ -189,11 +221,17 @@ section#contact {
   }
 }
 
-.invalid {
+span.invalid {
   color: $r;
   font-size: 14px;
   margin-top: 4px;
   display: block;
+  min-height: 18px;
+  visibility: hidden;
+}
+
+span.invalid.show {
+  visibility: visible;
 }
 
 @media (max-width: $breakpoint-desktop) {
