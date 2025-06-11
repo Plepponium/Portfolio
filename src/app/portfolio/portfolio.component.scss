@@ -163,6 +163,7 @@ section#portfolio {
     display: flex;
     justify-content: center;
     .ref-frame {
+      position: relative;
       padding: 48px 96px;
       border: 4px solid $purple;
       border-radius: 32px;
@@ -171,6 +172,14 @@ section#portfolio {
       gap: 44px;
       max-width: 850px;
       background-color: $darkblue;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-65px, -30px);
+        width: 96px;
+        height: auto;
+      }
       p {
         font-size: 20px;
       }
@@ -245,7 +254,10 @@ section#portfolio {
       padding-top: 32px;
       .ref-frame {
         padding: 12px 24px;
-        p{
+        img{
+          display: none;
+        }
+        p {
           font-size: 16px;
         }
       }
