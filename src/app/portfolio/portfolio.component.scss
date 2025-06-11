@@ -1,7 +1,7 @@
 @import "./../../styles.scss";
 
 section#portfolio {
-  padding: 100px $padding-lr 200px;
+  padding: 100px;
   overflow: hidden;
   position: relative;
 
@@ -10,7 +10,6 @@ section#portfolio {
     align-items: $c;
     gap: 32px;
     transform: translateX(-100px);
-    margin-top: 16px;
 
     h1 {
       font-size: clamp(36px, 5vw, 90px);
@@ -158,6 +157,38 @@ section#portfolio {
     left: 0;
     transform: translateX(-25vw);
   }
+
+  .references {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    .ref-frame {
+      padding: 48px 96px;
+      border: 4px solid $purple;
+      border-radius: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+      max-width: 850px;
+      background-color: $darkblue;
+      p {
+        font-size: 20px;
+      }
+      .ref-name-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        .line {
+          width: 100%;
+          background-color: $lightblue;
+        }
+        .ref-name {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: $breakpoint-tablet) {
@@ -207,6 +238,15 @@ section#portfolio {
               font-size: 14px;
             }
           }
+        }
+      }
+    }
+    .references {
+      padding-top: 32px;
+      .ref-frame {
+        padding: 12px 24px;
+        p{
+          font-size: 16px;
         }
       }
     }

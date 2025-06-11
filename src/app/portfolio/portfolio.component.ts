@@ -11,22 +11,28 @@ import { TranslateModule } from '@ngx-translate/core';
 export class PortfolioComponent {
 
   projects = [
-  {
-    image: 'elpolloloco',
-    name: 'El Pollo Loco',
-    descriptionKey: 'portfolio.projects.elpollo.description',
-    tech: ['JavaScript', 'HTML5', 'OOP'],
-    github: 'https://github.com/Plepponium/ElPolloLoco',
-    live: 'https://adrian-kleinschmidt.developerakademie.net/El%20Pollo%20Loco/index.html'
-  },
-  {
-    image: 'join',
-    name: 'Join',
-    descriptionKey: 'portfolio.projects.join.description',
-    tech: ['JavaScript', 'CSS', 'HTML'],
-    github: 'https://github.com/AlexAntalToth/JOIN---ToDo-Software',
-    live: 'https://join-398.developerakademie.net/'
-  },
-];
+    {
+      image: 'elpolloloco',
+      name: 'El Pollo Loco',
+      descriptionKey: 'portfolio.projects.elpollo.description',
+      tech: ['JavaScript', 'HTML5', 'OOP'],
+      github: 'https://github.com/Plepponium/ElPolloLoco',
+      live: 'https://adrian-kleinschmidt.developerakademie.net/El%20Pollo%20Loco/index.html'
+    },
+    {
+      image: 'join',
+      name: 'Join',
+      descriptionKey: 'portfolio.projects.join.description',
+      tech: ['JavaScript', 'CSS', 'HTML'],
+      github: 'https://github.com/AlexAntalToth/JOIN---ToDo-Software',
+      live: 'https://join-398.developerakademie.net/'
+    },
+  ];
+
+  references = [{
+    text: 'Adrian ist eine verlässliche Person, mit der ich sehr gerne am Projekt gearbeitet habe. Auch in stressigen Phasen behält er einen kühlen Kopf und hat immer ein offenes Ohr, wenn es mal hakt. Vielen Dank für die angenehme Zusammenarbeit!',
+    name: 'Andreas',
+    title: 'Team Partner'
+  }]
 
 }

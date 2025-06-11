@@ -26,5 +26,14 @@
       </div>
     </div>
   </div>
+  <div class="references" *ngFor="let reference of references">
+    <div class="ref-frame">
+      <p>{{ reference.text }}</p>
+      <div class="ref-name-container">
+        <div class="line"></div>
+        <p class="ref-name">{{reference.name}} - {{reference.title}}</p>
+      </div>
+    </div>
+  </div>
 
 </section>
