@@ -1,20 +1,58 @@
 @import "./../../styles.scss";
 
-#above-the-fold {
+section#above-the-fold {
+  position: relative;
+  max-width: $breakpoint-1440p;
   height: 100vh;
+  overflow: visible;
   display: $f;
   flex-direction: $col;
   justify-content: $c;
   align-items: $c;
+  padding: 0 100px;
   gap: 35px;
-  padding: 0 $padding-lr;
-  position: relative;
-  overflow: hidden;
+
+  @media (min-width: $breakpoint-1440p) {
+    margin: auto;
+    overflow: visible;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0 15px;
+  }
 
   .left,
   .right {
     position: absolute;
     z-index: -1;
+    width: 400px;
+    height: auto;
+
+    @media (max-width: $breakpoint-tablet) {
+      width: 350px;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      width: 300px;
+    }
+  }
+
+  .left {
+    left: 0;
+    @media (max-width: $breakpoint-tablet) {
+      left: -100px;
+      top: 250px;
+    }
+  }
+
+  .right {
+    right: 0;
+    @media (max-width: $breakpoint-tablet) {
+      right: -100px;
+      bottom: 100px;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      right: -50px;
+    }
   }
 
   #scroll-btn {
@@ -27,6 +65,10 @@
     color: $w;
     line-height: 120%;
     letter-spacing: 0;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: none;
+    }
   }
 }
 
@@ -35,11 +77,18 @@
   align-items: $c;
   justify-content: $c;
   text-align: $c;
+
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+  }
   span {
     font-size: clamp(32px, 6vw, 90px);
     transform: rotate(-90deg);
     color: $w;
     white-space: nowrap;
+    @media (max-width: $breakpoint-mobile) {
+      transform: none;
+    }
   }
 }
 
@@ -49,7 +98,7 @@
   max-width: 100%;
 
   h1 {
-    font-size: clamp(29px, 6vw, 128px);
+    font-size: clamp(29px, 6vw, 96px);
     word-break: break-word;
   }
   h2 {
@@ -82,52 +131,8 @@
   }
 }
 
-.left {
-  left: 0;
-}
-
-.right {
-  right: 0;
-}
-
-@media (max-width: $breakpoint-tablet) {
-  .left,
-  .right {
-    width: 350px;
-    height: auto;
-  }
-  .left {
-    top: 250px;
-    left: -100px;
-  }
-  .right {
-    bottom: 100px;
-    right: -100px;
-  }
-  #scroll-btn {
-    display: none;
-  }
-}
-
-@media (max-width: $breakpoint-mobile) {
-#above-the-fold {
-  padding: 0 15px;
-}
-
-  .left,
-  .right {
-    width: 300px;
-  }
-  .right {
-    right: -50px;
-  }
-  .atf-header {
-    flex-direction: column;
-    span {
-      transform: none;
-    }
-  }
-  .regular-btn {
+.regular-btn {
+  @media (max-width: $breakpoint-mobile) {
     font-size: 19px;
   }
 }
