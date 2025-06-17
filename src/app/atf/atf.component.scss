@@ -4,7 +4,7 @@ section#above-the-fold {
   position: relative;
   max-width: $breakpoint-1440p;
   height: 100vh;
-  overflow: visible;
+  overflow: hidden;
   display: $f;
   flex-direction: $col;
   justify-content: $c;

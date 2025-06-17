@@ -5,6 +5,10 @@ section#about-me {
   position: relative;
   overflow: hidden;
 
+  @media (max-width: $breakpoint-tablet){
+    padding: 100px 32px 30px;
+  }
+
   @media (max-width: $breakpoint-mobile) {
     padding: 80px 15px 15px;
   }
@@ -14,13 +18,20 @@ section#about-me {
     width: 100%;
     display: $f;
     justify-content: space-between;
+    gap: 48px;
     margin: 0 auto;
 
     @media (max-width: $breakpoint-desktop) {
       flex-direction: $col;
-      justify-content: $c;
+      align-items: $c;
       gap: 8px;
     }
+  }
+
+  .info-container,
+  .photo-container {
+    flex: 1;
+    min-width: 0;
   }
 
   .info-container {
@@ -32,10 +43,7 @@ section#about-me {
       max-width: 800px;
       width: 100%;
       margin-top: 16px;
-
-      span {
-        font-size: clamp(14px, 1.8vw, 16px);
-      }
+      font-size: clamp(14px, 1.3vw, 16px);
 
       table {
         border-collapse: separate;
@@ -50,9 +58,10 @@ section#about-me {
           max-width: 600px;
           vertical-align: top;
           text-align: left;
-          font-size: clamp(14px, 1.8vw, 16px);
 
           img {
+            width: 48px;
+            height: auto;
             transition: transform 125ms ease-in-out;
             &:hover {
               transform: scale(1.5);
@@ -65,7 +74,7 @@ section#about-me {
 
   .photo-container {
     position: relative;
-    display: flex;
+    display: $f;
     align-items: flex-end;
     justify-content: center;
     height: 800px;
