@@ -1,20 +1,25 @@
 @import "./../../styles.scss";
 
+.atf-outer-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 section#above-the-fold {
   position: relative;
-  max-width: $breakpoint-1440p;
   height: 100vh;
-  overflow: hidden;
+  padding: 0 100px;
   display: $f;
   flex-direction: $col;
   justify-content: $c;
   align-items: $c;
-  padding: 0 100px;
   gap: 35px;
+  margin: 0 auto;
+  max-width: $breakpoint-1440p;
 
-  @media (min-width: $breakpoint-1440p) {
-    margin: auto;
-    overflow: visible;
+  @media (max-width: $breakpoint-desktop) {
+    padding: 0 50px;
   }
 
   @media (max-width: $breakpoint-mobile) {
@@ -25,33 +30,26 @@ section#above-the-fold {
   .right {
     position: absolute;
     z-index: -1;
-    width: 400px;
-    height: auto;
 
     @media (max-width: $breakpoint-tablet) {
-      width: 350px;
     }
     @media (max-width: $breakpoint-mobile) {
-      width: 300px;
     }
   }
 
   .left {
-    left: 0;
+    left: -300px;
     @media (max-width: $breakpoint-tablet) {
-      left: -100px;
-      top: 250px;
     }
   }
 
   .right {
-    right: 0;
+    height: 800px;
+    object-fit: fill;
+    right: -500px;
     @media (max-width: $breakpoint-tablet) {
-      right: -100px;
-      bottom: 100px;
     }
     @media (max-width: $breakpoint-mobile) {
-      right: -50px;
     }
   }
 
@@ -76,7 +74,6 @@ section#above-the-fold {
   display: $f;
   align-items: $c;
   justify-content: $c;
-  text-align: $c;
 
   @media (max-width: $breakpoint-mobile) {
     flex-direction: column;
@@ -96,13 +93,17 @@ section#above-the-fold {
   display: $f;
   flex-direction: $col;
   max-width: 100%;
+  text-align: left;
+
+  @media (max-width: $breakpoint-mobile) {
+    text-align: $c;
+  }
 
   h1 {
     font-size: clamp(29px, 6vw, 96px);
     word-break: break-word;
   }
   h2 {
-    font-family: poppins;
     font-size: clamp(23px, 4.5vw, 64px);
     color: $purple;
     text-transform: uppercase;
@@ -115,14 +116,26 @@ section#above-the-fold {
   bottom: 50px;
   display: $f;
   align-items: $c;
-  gap: 42px;
+
+  .icons {
+    display: $f;
+    gap: 42px;
+    padding-left: 142px;
+  }
 
   .line {
-    width: 100px;
+    position: absolute;
+    left: -1000px;
+    width: 1100px;
+    min-width: 100px;
+    background-color: $g;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-    background-color: $g;
+
+    @media (min-width: $breakpoint-1440p) {
+    }
   }
+
   a {
     transition: all 125ms ease-in-out;
     &:hover {

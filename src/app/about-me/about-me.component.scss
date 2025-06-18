@@ -5,8 +5,8 @@ section#about-me {
   position: relative;
   overflow: hidden;
 
-  @media (max-width: $breakpoint-tablet){
-    padding: 100px 32px 30px;
+  @media (max-width: $breakpoint-desktop){
+    padding: 120px 50px 30px;
   }
 
   @media (max-width: $breakpoint-mobile) {
@@ -18,7 +18,7 @@ section#about-me {
     width: 100%;
     display: $f;
     justify-content: space-between;
-    gap: 48px;
+    gap: 32px;
     margin: 0 auto;
 
     @media (max-width: $breakpoint-desktop) {
@@ -48,7 +48,7 @@ section#about-me {
       table {
         border-collapse: separate;
         border-spacing: 4px 6px;
-        font-weight: normal;
+        font-weight: 400;
 
         .va-middle {
           vertical-align: middle;
@@ -75,13 +75,14 @@ section#about-me {
   .photo-container {
     position: relative;
     display: $f;
-    align-items: flex-end;
     justify-content: center;
-    height: 800px;
+    aspect-ratio: 3 / 4;
+    max-width: 100%;
 
     @media (max-width: $breakpoint-desktop) {
       order: -1;
-      height: auto;
+      aspect-ratio: unset;
+      max-width: 500px;
     }
 
     @media (max-width: $breakpoint-mobile) {
@@ -93,13 +94,14 @@ section#about-me {
     img:nth-child(1) {
       position: relative;
       z-index: 0;
-      width: auto;
-      height: 100%;
+      width: 100%;
+      height: auto;
       max-height: 800px;
+      min-height: 680px;
       object-fit: contain;
 
       @media (max-width: $breakpoint-mobile) {
-        max-height: 500px;
+        min-height: 500px;
         object-fit: cover;
       }
     }

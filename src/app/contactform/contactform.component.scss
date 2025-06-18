@@ -33,7 +33,7 @@ section#contact {
       p {
         font-size: clamp(14px, 2vw, 20px);
         span {
-          font-family: $bold;
+          font-weight: 700;
         }
       }
       .text-headline {
@@ -78,7 +78,7 @@ section#contact {
 
             &::placeholder {
               color: $w;
-              font-family: poppins;
+              font-weight: 700;
             }
 
             &:hover {

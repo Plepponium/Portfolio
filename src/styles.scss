@@ -5,8 +5,6 @@ $grey: #b6b6b6;
 $purple: #9747ff;
 $darkblue: #141d2f;
 $lightblue: #1cdae6;
-$regular: poppins;
-$bold: poppins-bold;
 $c: center;
 $f: flex;
 $col: column;
@@ -17,13 +15,17 @@ $breakpoint-tablet: 768px;
 $breakpoint-mobile: 480px;
 
 @font-face {
-  font-family: $regular;
-  src: url(./../public/assets/fonts/poppins.ttf);
+  font-family: 'Poppins';
+  src: url('/assets/fonts/poppins.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: $bold;
-  src: url(./../public/assets/fonts/poppins_bold.ttf);
+  font-family: 'Poppins';
+  src: url('/assets/fonts/poppins-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
 }
 
 * {
@@ -32,7 +34,7 @@ $breakpoint-mobile: 480px;
 }
 
 body {
-  font-family: $regular;
+  font-family: 'Poppins', sans-serif;
   background-color: $darkblue;
   color: $w;
   display: $f;
@@ -51,7 +53,7 @@ app-root {
 }
 
 h1 {
-  font-family: $bold;
+  font-weight: 700;
   font-size: 90px;
   color: $w;
   line-height: 120%;
@@ -59,7 +61,7 @@ h1 {
 }
 
 h2 {
-  font-family: $bold;
+  font-weight: 700;
   font-size: 32px;
   line-height: 120%;
   letter-spacing: 0;

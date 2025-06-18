@@ -68,7 +68,7 @@ section#skills {
       }
 
       .skill-label {
-        font-family: $bold;
+        font-weight: 700;
         margin-top: 10px;
         font-size: 16px;
       }
@@ -100,7 +100,6 @@ section#skills {
       align-items: center;
 
       h1 {
-        font-family: $bold;
         font-size: clamp(36px, 5vw, 90px);
       }
 
