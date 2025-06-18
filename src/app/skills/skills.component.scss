@@ -23,15 +23,29 @@
   }
 }
 
-@import "./../../styles.scss";
+.skills-wrapper {
+  overflow-x: hidden;
+}
 
 section#skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 32px 100px 0;
+  padding: 120px 100px 15px;
+  margin: 0 auto;
   scroll-margin-top: 150px;
+  max-width: $breakpoint-1440p;
+
+  @media (max-width: $breakpoint-desktop) {
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 50px 15px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 90px 15px 15px;
+  }
 
   .skill-img-container {
     order: 1;
@@ -42,6 +56,12 @@ section#skills {
     z-index: 1;
     transform: translateY(40px);
 
+    @media (max-width: $breakpoint-desktop) {
+      order: 2;
+      width: 100%;
+      transform: none;
+    }
+
     .skill-item {
       width: calc((100% - 3 * 40px) / 4);
       display: flex;
@@ -50,6 +70,10 @@ section#skills {
       text-align: center;
       color: white;
       position: relative;
+
+      @media (max-width: $breakpoint-mobile) {
+        width: calc((100% - 2 * 40px) / 3);
+      }
 
       img.skill {
         object-fit: contain;
@@ -95,20 +119,39 @@ section#skills {
     z-index: 1;
     transform: translateY(40px);
 
+    @media (max-width: $breakpoint-desktop) {
+      order: 1;
+      width: 100%;
+      margin-bottom: 32px;
+      transform: none;
+    }
+
     .headline {
       display: flex;
       align-items: center;
+      position: relative;
+
+      @media (max-width: $breakpoint-desktop) {
+        gap: 24px;
+      }
 
       h1 {
         font-size: clamp(36px, 5vw, 90px);
       }
 
       .line {
-        width: 100%;
+        position: absolute;
+        right: -1150px;
+        width: 1200px;
         background-color: $lightblue;
         border-bottom-left-radius: 2px;
         border-top-left-radius: 2px;
         transform: translateX(100px);
+        @media (max-width: $breakpoint-desktop) {
+          position: static;
+          width: 100%;
+          transform: translateX(15px);
+        }
       }
     }
 
@@ -125,6 +168,14 @@ section#skills {
     flex-direction: column;
     gap: 16px;
     color: white;
+    z-index: 1;
+
+    @media (max-width: $breakpoint-desktop) {
+      order: 3;
+      width: 100%;
+      margin-top: 32px;
+      align-items: center;
+    }
 
     h2 {
       font-size: 24px;
@@ -141,62 +192,9 @@ section#skills {
     .regular-btn {
       align-self: flex-start;
       margin-top: 16px;
-    }
-  }
-}
 
-@media (max-width: $breakpoint-desktop) {
-  section#skills {
-    flex-direction: column;
-    align-items: center;
-    padding: 32px 30px 40px;
-
-    .skill-img-container {
-      order: 2;
-      width: 100%;
-      transform: none;
-    }
-
-    .skill-text-container {
-      order: 1;
-      width: 100%;
-      margin-bottom: 32px;
-      transform: none;
-      .headline {
-        gap: 24px;
-        .line {
-          transform: translateX(30px);
-        }
-      }
-    }
-
-    .skill-followup-container {
-      order: 3;
-      width: 100%;
-      margin-top: 32px;
-      align-items: center;
-    }
-  }
-}
-
-@media (max-width: $breakpoint-mobile) {
-  .regular-btn {
-    font-size: 19px;
-  }
-
-  section#skills {
-    padding: 80px 15px 15px;
-    scroll-margin-top: 40px;
-    .skill-img-container {
-      .skill-item {
-        width: calc((100% - 2 * 40px) / 3);
-      }
-    }
-    .skill-text-container {
-      .headline {
-        .line {
-          transform: translateX(15px);
-        }
+      @media (max-width: $breakpoint-mobile) {
+        font-size: 19px;
       }
     }
   }
