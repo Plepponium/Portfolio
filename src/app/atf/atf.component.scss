@@ -2,7 +2,7 @@
 
 .atf-outer-wrapper {
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
 }
 
@@ -41,6 +41,9 @@ section#above-the-fold {
     left: -300px;
     @media (max-width: $breakpoint-tablet) {
     }
+    @media (max-width: $breakpoint-mobile) {
+      height: 500px;
+    }
   }
 
   .right {
@@ -50,6 +53,7 @@ section#above-the-fold {
     @media (max-width: $breakpoint-tablet) {
     }
     @media (max-width: $breakpoint-mobile) {
+      height: 600px;
     }
   }
 
