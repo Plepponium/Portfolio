@@ -3,10 +3,13 @@
 .transition-wrapper {
   position: absolute;
   width: 100%;
-  aspect-ratio: 16 / 5;
+  height: 100%;
   background-image: url("/assets/img/curved.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
-  margin-top: -500px;
+  margin-top: -350px;
+
+  @media (max-width: $breakpoint-desktop){
+    margin-top: -850px;
+  }
 }
