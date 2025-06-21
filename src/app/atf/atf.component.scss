@@ -79,12 +79,26 @@ section#above-the-fold {
     flex-direction: column;
   }
   span {
-    font-size: clamp(32px, 6vw, 90px);
+    font-size: 90px;
     transform: rotate(-90deg);
     color: $w;
     white-space: nowrap;
+
+    @media (max-width: $breakpoint-1440p) {
+      font-size: 72px;
+    }
+
+    @media (max-width: $breakpoint-desktop) {
+      font-size: 56px;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 36px;
+    }
+
     @media (max-width: $breakpoint-mobile) {
       transform: none;
+      font-size: 32px;
     }
   }
 }
@@ -100,13 +114,45 @@ section#above-the-fold {
   }
 
   h1 {
-    font-size: clamp(29px, 6vw, 96px);
     word-break: break-word;
+    font-size: 96px;
+
+    @media (max-width: $breakpoint-1440p) {
+      font-size: 72px;
+    }
+
+    @media (max-width: $breakpoint-desktop) {
+      font-size: 56px;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 36px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 29px;
+    }
   }
   h2 {
-    font-size: clamp(23px, 4.5vw, 64px);
+    font-size: 64px;
     color: $purple;
     text-transform: uppercase;
+
+    @media (max-width: $breakpoint-1440p) {
+      font-size: 48px;
+    }
+
+    @media (max-width: $breakpoint-desktop) {
+      font-size: 38px;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 30px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 23px;
+    }
   }
 }
 
@@ -146,6 +192,6 @@ section#above-the-fold {
 
 .regular-btn {
   @media (max-width: $breakpoint-mobile) {
-    font-size: 19px;
+    font-size: 16px;
   }
 }

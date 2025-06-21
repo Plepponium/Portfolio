@@ -16,6 +16,14 @@ header {
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: $breakpoint-desktop) {
+      padding: 15px 50px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: 15px;
+    }
+
     a img {
       width: 150px;
       height: 50px;
@@ -28,11 +36,23 @@ header {
       font-size: 60px;
       color: $w;
       cursor: pointer;
+
+      @media (max-width: $breakpoint-desktop) {
+        display: block;
+      }
+
+      @media (max-width: $breakpoint-mobile) {
+        font-size: 40px;
+      }
     }
 
     .desktop-nav {
       display: flex;
       gap: 64px;
+
+      @media (max-width: $breakpoint-desktop) {
+        display: none !important;
+      }
     }
   }
 }
@@ -48,9 +68,12 @@ header {
   display: none;
   justify-content: $c;
   align-items: $c;
-
   transform: translateX(100%);
   transition: transform 125ms ease-in-out;
+
+  @media (max-width: $breakpoint-desktop) {
+    display: flex;
+  }
 
   &.open {
     transform: translateX(0);
@@ -59,33 +82,5 @@ header {
     display: $f;
     flex-direction: $col;
     align-items: $c;
-  }
-}
-
-@media (max-width: $breakpoint-desktop) {
-  header .header-content {
-    padding: 15px 50px;
-
-    .burger {
-      display: block;
-    }
-
-    .desktop-nav {
-      display: none !important;
-    }
-  }
-
-  .overlay {
-    display: flex;
-  }
-}
-
-@media (max-width: $breakpoint-mobile) {
-  header .header-content {
-    padding: 15px;
-
-    .burger {
-      font-size: 40px;
-    }
   }
 }
