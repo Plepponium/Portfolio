@@ -94,6 +94,10 @@ section#skills {
         font-weight: 700;
         margin-top: 10px;
         font-size: 16px;
+
+         @media (max-width: $breakpoint-mobile) {
+          font-size: 14px;
+        }
       }
 
       .speech-bubble {
@@ -135,7 +139,23 @@ section#skills {
       }
 
       h1 {
-        font-size: clamp(36px, 5vw, 90px);
+        font-size: 90px;
+
+        @media (max-width: $breakpoint-1440p) {
+          font-size: 72px;
+        }
+
+        @media (max-width: $breakpoint-desktop) {
+          font-size: 56px;
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+          font-size: 36px;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+          font-size: 29px;
+        }
       }
 
       .line {
@@ -155,7 +175,15 @@ section#skills {
     }
 
     .description {
-      font-size: 16px;
+      font-size: 20px;
+
+      @media (max-width: $breakpoint-1440p) {
+        font-size: 16px;
+      }
+
+      @media (max-width: $breakpoint-mobile) {
+        font-size: 12px;
+      }
     }
   }
 
@@ -163,6 +191,7 @@ section#skills {
     order: 3;
     width: 35%;
     margin-left: auto;
+    margin-top: 32px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -177,7 +206,15 @@ section#skills {
     }
 
     h2 {
-      font-size: 24px;
+      font-size: 30px;
+
+      @media (max-width: $breakpoint-1440p) {
+        font-size: 24px;
+      }
+
+      @media (max-width: $breakpoint-mobile) {
+        font-size: 20px;
+      }
     }
 
     .highlight {
@@ -185,7 +222,15 @@ section#skills {
     }
 
     .followup {
-      font-size: 16px;
+      font-size: 20px;
+
+      @media (max-width: $breakpoint-1440p) {
+        font-size: 16px;
+      }
+
+      @media (max-width: $breakpoint-mobile) {
+        font-size: 12px;
+      }
     }
 
     .regular-btn {
