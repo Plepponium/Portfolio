@@ -1,64 +1,152 @@
 @import "./../../styles.scss";
 
-section#contact {
-  padding: 200px 100px 200px;
-  scroll-margin-top: 100px;
-  position: relative;
+.contact-outer-wrapper {
+  width: 100%;
   overflow: hidden;
+  position: relative;
+}
+
+section#contact {
+  padding: 116px 100px 200px;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+
+  @media (max-width: $breakpoint-desktop) {
+    padding-top: 100px;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    padding: 120px 30px 100px;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    padding: 106px 15px 60px;
+  }
 
   .headline {
     display: $f;
     align-items: $c;
     justify-content: flex-end;
-    transform: translateX(clamp(30px, 30vw, 100px));
-    gap: 32px;
     margin-bottom: 16px;
+    position: relative;
+    right: 500px;
+
+    @media (max-width: $breakpoint-desktop) {
+      margin-bottom: 32px;
+      right: 200px;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      right: 100px;
+    }
+
     .line {
-      width: 100%;
-      max-width: 500px;
+      width: 1200px;
+      position: absolute;
+      right: -1232px;
       border-top-left-radius: 2px;
       border-bottom-left-radius: 2px;
       background-color: $g;
     }
+
     h1 {
-      font-size: clamp(36px, 5vw, 90px);
+      font-size: 90px;
+
+      @media (max-width: $breakpoint-1440p) {
+        font-size: 72px;
+      }
+
+      @media (max-width: $breakpoint-desktop) {
+        font-size: 56px;
+      }
+
+      @media (max-width: $breakpoint-tablet) {
+        font-size: 36px;
+      }
+
+      @media (max-width: $breakpoint-mobile) {
+        font-size: 29px;
+      }
     }
   }
+
   .contact-content {
     display: $f;
     justify-content: space-between;
-    gap: 64px;
+    gap: 32px;
+
+    @media (max-width: $breakpoint-desktop) {
+      flex-direction: column;
+      gap: 64px;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      gap: 32px;
+    }
+
     .text {
       flex: 1;
+
       p {
-        font-size: clamp(14px, 2vw, 20px);
+        font-size: 20px;
+
+        @media (max-width: $breakpoint-1440p) {
+          font-size: 16px;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+          font-size: 12px;
+        }
+
         span {
           font-weight: 700;
         }
       }
+
       .text-headline {
         display: $f;
         align-items: $c;
-        transform: translateX(-100px);
-        gap: 32px;
+        position: relative;
+        left: 0;
+
         .line {
-          width: 68px;
+          position: absolute;
+          width: 1200px;
+          left: -1232px;
           border-top-right-radius: 2px;
           border-bottom-right-radius: 2px;
           background-color: $lightblue;
+
+          @media (max-width: $breakpoint-tablet) {
+            left: -1216px;
+          }
+          @media (max-width: $breakpoint-mobile) {
+            left: -1204px;
+          }
         }
+
         h2 {
-          font-size: clamp(19px, 4.5vw, 32px);
+          font-size: 30px;
+
+          @media (max-width: $breakpoint-1440p) {
+            font-size: 24px;
+          }
+
+          @media (max-width: $breakpoint-mobile) {
+            font-size: 20px;
+          }
         }
       }
     }
+
     .form-container {
-      max-width: 600px;
       align-self: center;
+
       form {
         display: flex;
         flex-direction: column;
         gap: 16px;
+
+        @media (max-width: $breakpoint-mobile) {
+          gap: 8px;
+        }
 
         .input-group {
           position: relative;
@@ -67,14 +155,22 @@ section#contact {
           textarea {
             width: 100%;
             box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
             background-color: $darkblue;
             border: 1px solid $purple;
             border-radius: 10px;
             padding: 15px 45px 15px 25px;
             color: $w;
-            font-size: 16px;
             line-height: 120%;
             letter-spacing: 0;
+            font-size: 16px;
+
+            @media (max-width: $breakpoint-tablet) {
+              font-size: 14px;
+            }
+            @media (max-width: $breakpoint-mobile) {
+              font-size: 12px;
+            }
 
             &::placeholder {
               color: $w;
@@ -132,6 +228,10 @@ section#contact {
           align-items: center;
           gap: 12px;
 
+          @media (max-width: $breakpoint-mobile) {
+            align-items: flex-start;
+          }
+
           input[type="checkbox"] {
             opacity: 0;
             position: absolute;
@@ -162,9 +262,15 @@ section#contact {
 
           p {
             font-size: 14px;
+
+            @media (max-width: $breakpoint-mobile) {
+              font-size: 12px;
+            }
+
             a {
               text-decoration: none;
               color: $purple;
+
               &:hover {
                 text-decoration: underline;
               }
@@ -174,16 +280,24 @@ section#contact {
 
         .regular-btn {
           align-self: center;
+
           &:hover {
             transform: scale(1.1);
           }
+
           &:disabled,
           &[disabled] {
             background-color: $grey;
             pointer-events: none;
+
             &:hover {
               transform: none;
             }
+          }
+
+          @media (max-width: $breakpoint-mobile) {
+            margin-top: 8px;
+            font-size: 19px;
           }
         }
       }
@@ -199,6 +313,15 @@ section#contact {
     justify-content: center;
     cursor: pointer;
 
+    @media (max-width: $breakpoint-tablet) {
+      right: 32px;
+      bottom: 32px;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      right: 16px;
+      bottom: 16px;
+    }
+
     img {
       width: 48px;
       height: 48px;
@@ -208,16 +331,33 @@ section#contact {
         filter: invert(0) sepia(94%) saturate(7454%) hue-rotate(33deg)
           brightness(93%) contrast(94%);
       }
+
+      @media (max-width: $breakpoint-mobile) {
+        width: 32px;
+        height: 32px;
+      }
     }
   }
 
   img#shadow {
-    width: clamp(500px, 40vw, 1000px);
-    pointer-events: none;
     position: absolute;
     top: 0;
-    right: -10%;
+    right: -300px;
+    height: 1314px;
+    width: auto;
+    pointer-events: none;
     z-index: -1;
+
+    @media (max-width: $breakpoint-tablet) {
+      height: 800px;
+      right: -200px;
+      top: unset;
+      bottom: 0;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      height: 600px;
+      right: -100px;
+    }
   }
 }
 
@@ -228,97 +368,12 @@ span.invalid {
   display: block;
   min-height: 18px;
   visibility: hidden;
-}
 
-span.invalid.show {
-  visibility: visible;
-}
-
-@media (max-width: $breakpoint-desktop) {
-  section#contact {
-    padding-top: 100px;
-    .contact-content {
-      flex-direction: column;
-      gap: 16px !important;
-    }
-    .headline {
-      margin-bottom: 32px !important;
-      transform: translateX(30px);
-    }
-    img#shadow {
-      top: 20% !important;
-      right: -12%;
-      width: 600px;
-    }
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 12px;
   }
-}
 
-@media (max-width: $breakpoint-tablet) {
-  section#contact {
-    padding: 80px 30px 100px;
-    .go-up-btn {
-      right: 32px;
-      bottom: 32px;
-    }
-    .contact-content {
-      .text {
-        .text-headline {
-          transform: translateX(-30px);
-          gap: 8px;
-          .line {
-            width: 20px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: $breakpoint-mobile) {
-  section#contact {
-    padding: 80px 15px 60px;
-    .headline {
-      gap: 12px;
-    }
-    .contact-content {
-      .form-container {
-        form {
-          gap: 8px;
-          .agree {
-            align-items: flex-start;
-            p {
-              font-size: 12px;
-            }
-          }
-          .regular-btn {
-            margin-top: 8px;
-            font-size: 19px;
-          }
-        }
-      }
-      .text {
-        .text-headline {
-          transform: translateX(-20px);
-          gap: 0;
-          .line {
-            width: 20px;
-          }
-        }
-      }
-    }
-    .go-up-btn {
-      right: 16px;
-      bottom: 16px;
-
-      img {
-        width: 32px;
-        height: 32px;
-      }
-    }
-    img#shadow {
-      top: 30%;
-      right: -16%;
-      width: 400px;
-    }
+  &.show {
+    visibility: visible;
   }
 }

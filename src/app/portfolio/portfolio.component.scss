@@ -1,16 +1,23 @@
 @import "./../../styles.scss";
 
-section#portfolio {
-  padding: 120px 100px 100px;
+.portfolio-outer-wrapper {
+  width: 100%;
   overflow: hidden;
   position: relative;
+}
+
+section#portfolio {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  padding: 120px 100px 100px;
 
   @media (max-width: $breakpoint-desktop) {
     padding: 120px 50px 100px;
   }
 
   @media (max-width: $breakpoint-mobile) {
-    padding: 90px 25px 80px;
+    padding: 106px 25px 40px;
   }
 
   .content-wrapper {
@@ -187,10 +194,15 @@ section#portfolio {
           }
 
           p {
-            font-size: 23px;
+            font-size: 20px;
             color: black;
-            @media (max-width: $breakpoint-mobile) {
+
+            @media (max-width: $breakpoint-desktop) {
               font-size: 16px;
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+              font-size: 12px;
             }
           }
 
@@ -216,27 +228,15 @@ section#portfolio {
     }
   }
 
-  img.shadow-blue,
-  img.shadow-green {
-    position: absolute;
-    height: auto;
-    z-index: -1;
-  }
-
-  img.shadow-blue {
-    top: 80px;
-    right: -80px;
-  }
-  img.shadow-green {
-    bottom: 0;
-    left: 0;
-    transform: translateX(-25vw);
-  }
-
   .references {
     padding-top: 100px;
     display: flex;
     justify-content: center;
+
+    @media (max-width: $breakpoint-mobile) {
+      padding-top: 64px;
+    }
+
     .ref-frame {
       position: relative;
       padding: 48px 96px;
@@ -247,6 +247,15 @@ section#portfolio {
       gap: 44px;
       max-width: 850px;
       background-color: $darkblue;
+
+      @media (max-width: $breakpoint-desktop) {
+        padding: 15px 50px;
+      }
+
+      @media (max-width: $breakpoint-mobile) {
+        padding: 15px;
+      }
+
       img {
         position: absolute;
         top: 0;
@@ -254,9 +263,27 @@ section#portfolio {
         transform: translate(-65px, -30px);
         width: 96px;
         height: auto;
+
+        @media (max-width: $breakpoint-desktop) {
+          width: 72px;
+          transform: translate(-30px, -30px);
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+          width: 48px;
+          transform: translate(-25px, -20px);
+        }
       }
       p {
         font-size: 20px;
+
+        @media (max-width: $breakpoint-desktop) {
+          font-size: 16px;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+          font-size: 14px;
+        }
       }
       .ref-name-container {
         display: flex;
@@ -272,5 +299,42 @@ section#portfolio {
         }
       }
     }
+  }
+}
+
+.portfolio-outer-wrapper .shadow {
+  position: absolute;
+  z-index: 0;
+  height: 800px;
+  width: auto;
+  pointer-events: none;
+  object-fit: contain;
+}
+
+.shadow-blue {
+  top: 0;
+  right: -300px;
+  @media (max-width: $breakpoint-desktop) {
+    right: -400px;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    height: 600px !important;
+    right: -250px;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    right: -200px;
+    height: 400px !important;
+  }
+}
+.shadow-green {
+  bottom: 200px;
+  left: -600px;
+  @media (max-width: $breakpoint-desktop) {
+    left: -500px;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    height: 600px !important;
+    left: -400px;
+    bottom: 200px;
   }
 }
