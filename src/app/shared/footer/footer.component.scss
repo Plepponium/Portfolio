@@ -7,7 +7,18 @@ footer#footer {
   align-items: center;
   border-top: 4px solid $g;
 
-  a.legal-link {
+  @media (max-width: $breakpoint-desktop) {
+    padding: 50px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: $col;
+    align-items: $c;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .legal-link {
     position: relative;
     text-decoration: none;
     font-size: 16px;
@@ -33,73 +44,69 @@ footer#footer {
     }
   }
 
-  .socials {
-    display: flex;
-    gap: 42px;
+  .legal-desktop {
+    display: block;
 
-    a {
-      transition: all 125ms ease-in-out;
-      &:hover {
-        transform: scale(1.25) translate(4px, 0);
-      }
+    @media (max-width: $breakpoint-tablet) {
+      display: none;
     }
   }
 
-  .copyright {
-    p {
-      font-size: 23px;
+  .legal-mobile {
+    display: none;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: block;
+      order: 3;
+      align-self: $c;
     }
   }
 
   .legal-logo {
     display: $f;
     flex-direction: $col;
+
     a img {
       width: 200px;
       height: 60px;
       object-fit: cover;
     }
-  }
-}
 
-@media (max-width: $breakpoint-desktop) {
-  footer#footer {
-    padding: 50px;
-  }
-}
-@media (max-width: $breakpoint-tablet) {
-  footer#footer {
-    padding: 24px;
-    flex-direction: $col;
-    align-items: $c;
-    gap: 24px;
-
-    .legal-logo {
+    @media (max-width: $breakpoint-tablet) {
       order: 0;
     }
+  }
 
-    .copyright {
+  .copyright {
+    p {
+      font-size: 23px;
+
+      @media (max-width: $breakpoint-mobile) {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
       order: 1;
     }
+  }
 
-    .socials {
+  .socials {
+    display: flex;
+    gap: 42px;
+
+    a {
+      transition: all 125ms ease-in-out;
+
+      &:hover {
+        transform: scale(1.25) translate(4px, 0);
+      }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
       order: 2;
-      display: flex;
       flex-direction: row;
       gap: 24px;
-    }
-
-    > .legal-link {
-      order: 3;
-      align-self: $c;
-    }
-  }
-}
-
-@media (max-width: $breakpoint-mobile) {
-  footer#footer {
-    .copyright p {
-      font-size: 18px;
     }
   }
 }

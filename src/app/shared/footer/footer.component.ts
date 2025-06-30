@@ -8,10 +8,5 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
-  isMobile = false;
-
-  ngOnInit() {
-    this.isMobile = window.innerWidth <= 768;
-  }
+export class FooterComponent {
 }
