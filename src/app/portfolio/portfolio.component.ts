@@ -17,7 +17,7 @@ export class PortfolioComponent {
       descriptionKey: 'portfolio.projects.elpollo.description',
       tech: ['JavaScript', 'HTML5', 'OOP'],
       github: 'https://github.com/Plepponium/ElPolloLoco',
-      live: 'https://adrian-kleinschmidt.developerakademie.net/El%20Pollo%20Loco/index.html'
+      live: 'https://el-pollo-loco.akleinschmidt.net/'
     },
     {
       image: 'join',
