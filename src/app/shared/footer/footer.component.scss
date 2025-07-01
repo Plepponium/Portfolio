@@ -1,21 +1,29 @@
 @import "./../../../styles.scss";
 
 footer#footer {
-  padding: 100px;
-  display: $f;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
   border-top: 4px solid $g;
+  padding: 100px 0;
 
-  @media (max-width: $breakpoint-desktop) {
-    padding: 50px;
-  }
+  .footer-inner {
+    max-width: $breakpoint-1440p;
+    margin: 0 auto;
+    padding: 0 100px;
 
-  @media (max-width: $breakpoint-tablet) {
-    flex-direction: $col;
-    align-items: $c;
-    gap: 24px;
-    padding: 24px;
+    display: $f;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $breakpoint-desktop) {
+      padding: 0 50px;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      flex-direction: $col;
+      align-items: $c;
+      gap: 24px;
+      padding: 0 24px;
+    }
   }
 
   .legal-link {
