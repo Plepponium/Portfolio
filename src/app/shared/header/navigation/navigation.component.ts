@@ -1,22 +1,29 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navigation',
-  imports: [CommonModule,TranslateModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss'],
 })
-export class NavigationComponent {
-  @Input() isMobile: boolean = false
+export class NavigationComponent implements OnInit {
+  @Input() isMobile: boolean = false;
   @Output() linkClicked = new EventEmitter<void>();
 
   currentLang = 'en';
   activeLink: string = '';
 
-  constructor(private translate: TranslateService) {
-    this.currentLang = this.translate.currentLang || 'en';
+  constructor(private translate: TranslateService) { }
+
+  ngOnInit() {
+    const savedLang = localStorage.getItem('lang');
+    if (savedLang) {
+      this.switchLanguage(savedLang);
+    } else {
+      this.switchLanguage(this.translate.getDefaultLang() || 'en');
+    }
   }
 
   switchLanguage(lang: string) {

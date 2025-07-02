@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-imprint',
+  selector: 'app-privacy',
   imports: [TranslateModule],
   standalone: true,
-  templateUrl: './imprint.component.html',
-  styleUrls: ['./imprint.component.scss']
+  templateUrl: './privacy.component.html',
+  styleUrls: ['./privacy.component.scss']
 })
-export class ImprintComponent {
+export class PrivacyComponent {
 
 }

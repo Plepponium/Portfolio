@@ -1,10 +1,10 @@
 @import "./../../styles.scss";
 
-section#imprint {
+section#privacy {
   width: 100%;
   overflow: hidden;
 
-  .imprint-wrapper {
+  .privacy-wrapper {
     max-width: $breakpoint-1440p;
     margin: 0 auto;
     padding: 120px 100px;
@@ -12,13 +12,6 @@ section#imprint {
     @media (max-width: $breakpoint-mobile) {
       padding: 106px 15px;
     }
-  }
-
-  hr {
-    height: 1px;
-    border-width: 0;
-    color: transparent;
-    background: linear-gradient(90deg, $g, $g, $purple, $purple);
   }
 
   h1 {
@@ -46,7 +39,7 @@ section#imprint {
   }
 
   p,
-  address,
+  ul,
   li {
     font-size: 16px;
     line-height: 1.6;

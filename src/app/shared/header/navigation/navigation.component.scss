@@ -10,6 +10,13 @@
     text-decoration: none;
     position: relative;
 
+    @media (max-width: $breakpoint-1440p) {
+      font-size: 20px;
+    }
+    @media (max-width: $breakpoint-desktop) {
+      font-size: 29px;
+    }
+
     &.active {
       color: $g;
     }
@@ -44,10 +51,17 @@
   gap: 14px;
 
   .language-btn {
-    font-size: 18px;
+    font-size: 20px;
     background-color: transparent;
     padding: 5px 8px;
     border: 1px solid $g;
+
+    @media (max-width: $breakpoint-1440p) {
+      font-size: 16px;
+    }
+    @media (max-width: $breakpoint-desktop) {
+      font-size: 23px;
+    }
 
     &:hover {
       background-color: $purple;

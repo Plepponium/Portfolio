@@ -52,7 +52,8 @@
       "emailError": "Bitte gib eine gültige E-Mail-Adresse ein",
 
       "messagePlaceholder": "Deine Nachricht",
-      "messageError": "Bitte gib deine Nachricht ein",
+      "messageError": "Bitte gib mindestens 4 Zeichen ein",
+
 
       "privacyTextPart1": "Ich habe die",
       "privacyLinkText": "Datenschutzerklärung",

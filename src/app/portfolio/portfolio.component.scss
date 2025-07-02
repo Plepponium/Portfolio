@@ -10,6 +10,7 @@ section#portfolio {
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
+  z-index: 1;
   padding: 120px 100px 100px;
 
   @media (max-width: $breakpoint-desktop) {
@@ -75,10 +76,6 @@ section#portfolio {
 
     @media (max-width: $breakpoint-desktop) {
       font-size: 16px;
-    }
-
-    @media (max-width: $breakpoint-mobile) {
-      font-size: 12px;
     }
   }
 
@@ -200,17 +197,13 @@ section#portfolio {
             @media (max-width: $breakpoint-desktop) {
               font-size: 16px;
             }
-
-            @media (max-width: $breakpoint-mobile) {
-              font-size: 12px;
-            }
           }
 
           .tech {
             font-size: 23px;
             color: $g;
             @media (max-width: $breakpoint-mobile) {
-              font-size: 16px;
+              font-size: 14px;
             }
           }
         }
@@ -280,16 +273,14 @@ section#portfolio {
         @media (max-width: $breakpoint-desktop) {
           font-size: 16px;
         }
-
-        @media (max-width: $breakpoint-mobile) {
-          font-size: 14px;
-        }
       }
+
       .ref-name-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 16px;
+
         .line {
           width: 100%;
           background-color: $lightblue;
@@ -304,7 +295,7 @@ section#portfolio {
 
 .portfolio-outer-wrapper .shadow {
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   height: 800px;
   width: auto;
   pointer-events: none;
@@ -336,5 +327,19 @@ section#portfolio {
     height: 600px !important;
     left: -400px;
     bottom: 200px;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .portfolio-item .project-overlay {
+    opacity: 1 !important;
+  }
+
+  .portfolio-item:hover .project-overlay {
+    opacity: 1 !important;
+  }
+
+  .image-wrapper img {
+    transform: scale(2);
   }
 }

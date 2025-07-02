@@ -52,8 +52,7 @@
       "emailError": "Please enter a valid e-mail address",
 
       "messagePlaceholder": "Your message",
-      "messageError": "Please enter your message",
-
+      "messageError": "Please enter at least 4 characters",
       "privacyTextPart1": "I've read the",
       "privacyLinkText": "privacy policy",
       "privacyTextPart2": "and agree to the processing of my data as outlined",

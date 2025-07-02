@@ -30,17 +30,10 @@ section#above-the-fold {
   .right {
     position: absolute;
     z-index: -1;
-
-    @media (max-width: $breakpoint-tablet) {
-    }
-    @media (max-width: $breakpoint-mobile) {
-    }
   }
 
   .left {
     left: -300px;
-    @media (max-width: $breakpoint-tablet) {
-    }
     @media (max-width: $breakpoint-mobile) {
       height: 500px;
     }
@@ -50,8 +43,6 @@ section#above-the-fold {
     height: 800px;
     object-fit: fill;
     right: -500px;
-    @media (max-width: $breakpoint-tablet) {
-    }
     @media (max-width: $breakpoint-mobile) {
       height: 600px;
     }
@@ -68,6 +59,9 @@ section#above-the-fold {
     line-height: 120%;
     letter-spacing: 0;
 
+    @media (max-width: $breakpoint-1440p) {
+      font-size: 20px;
+    }
     @media (max-width: $breakpoint-tablet) {
       display: none;
     }

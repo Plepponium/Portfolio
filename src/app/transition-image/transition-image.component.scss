@@ -9,10 +9,19 @@
   background-repeat: no-repeat;
   margin-top: -350px;
 
+  @media (max-width: $breakpoint-1440p){
+    margin-top: -275px;
+  }
   @media (max-width: $breakpoint-desktop){
     margin-top: -850px;
   }
-  @media (max-width: $breakpoint-desktop){
-    margin-top: -750px;
+  @media (max-width: $breakpoint-tablet){
+    margin-top: -900px;
+  }
+  @media (max-width: $breakpoint-mobile){
+    margin-top: -950px;
+  }
+  @media (max-width: 400px){
+    margin-top: -1075px;
   }
 }

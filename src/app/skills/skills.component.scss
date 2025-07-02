@@ -180,10 +180,6 @@ section#skills {
       @media (max-width: $breakpoint-1440p) {
         font-size: 16px;
       }
-
-      @media (max-width: $breakpoint-mobile) {
-        font-size: 12px;
-      }
     }
   }
 
@@ -227,10 +223,6 @@ section#skills {
       @media (max-width: $breakpoint-1440p) {
         font-size: 16px;
       }
-
-      @media (max-width: $breakpoint-mobile) {
-        font-size: 12px;
-      }
     }
 
     .regular-btn {
@@ -238,7 +230,7 @@ section#skills {
       margin-top: 16px;
 
       @media (max-width: $breakpoint-mobile) {
-        font-size: 19px;
+        font-size: 16px;
       }
     }
   }

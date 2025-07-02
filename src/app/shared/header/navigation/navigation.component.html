@@ -8,7 +8,7 @@
   <a href="#portfolio" (click)="handleClick('portfolio')" [class.active]="isActive('portfolio')">
     {{ 'header.portfolio' | translate }}
   </a>
-  <a *ngIf="isMobile" href="#contact" (click)="handleClick('contact')" [class.active]="isActive('contact')">
+  <a  href="#contact" (click)="handleClick('contact')" [class.active]="isActive('contact')">
     {{ 'header.contact' | translate }}
   </a>
 </div>

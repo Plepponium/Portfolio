@@ -67,15 +67,8 @@ section#about-me {
       margin-top: 16px;
       font-size: 16px;
 
-      @media (max-width: $breakpoint-1440p) {
-        font-size: 14px;
-      }
-
-      @media (max-width: $breakpoint-mobile) {
-        font-size: 12px;
-      }
-
       table {
+        margin-top: 16px;
         border-collapse: separate;
         border-spacing: 4px 6px;
         font-weight: 400;
@@ -85,7 +78,6 @@ section#about-me {
         }
 
         td {
-          max-width: 600px;
           vertical-align: top;
           text-align: left;
 
