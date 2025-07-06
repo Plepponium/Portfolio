@@ -126,9 +126,9 @@ section#about-me {
       min-height: 360px;
 
       @media (max-width: $breakpoint-mobile) {
-      max-width: 260px;
-      max-height: 410px;
-    }
+        max-width: 260px;
+        max-height: 410px;
+      }
     }
 
     img:nth-child(2) {
@@ -137,9 +137,9 @@ section#about-me {
       object-fit: cover;
 
       @media (max-width: $breakpoint-mobile) {
-      object-fit: contain;
-      width: 520px;
-    }
+        object-fit: contain;
+        width: 520px;
+      }
     }
   }
 }

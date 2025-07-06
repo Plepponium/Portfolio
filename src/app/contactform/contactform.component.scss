@@ -7,19 +7,19 @@
 }
 
 section#contact {
-  padding: 116px 100px 200px;
+  padding: 120px 100px 200px;
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
 
   @media (max-width: $breakpoint-desktop) {
-    padding: 100px 50px 100px;
+    padding: 128px 50px 100px;
   }
   @media (max-width: $breakpoint-tablet) {
-    padding: 120px 30px 100px;
+    padding: 128px 30px 100px;
   }
   @media (max-width: $breakpoint-mobile) {
-    padding: 106px 15px 60px;
+    padding: 98px 15px 60px;
   }
 
   .headline {

@@ -58,12 +58,27 @@ section#above-the-fold {
     color: $w;
     line-height: 120%;
     letter-spacing: 0;
+    animation: bounceFade 2s ease-in-out infinite;
+    opacity: 0.8;
 
     @media (max-width: $breakpoint-1440p) {
       font-size: 20px;
     }
+
     @media (max-width: $breakpoint-tablet) {
       display: none;
+    }
+  }
+
+  @keyframes bounceFade {
+    0%,
+    100% {
+      transform: rotate(90deg) translateX(0);
+      opacity: 0.8;
+    }
+    50% {
+      transform: rotate(90deg) translateX(-20px);
+      opacity: 1;
     }
   }
 }

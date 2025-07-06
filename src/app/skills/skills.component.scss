@@ -53,7 +53,6 @@ section#skills {
     display: flex;
     flex-wrap: wrap;
     z-index: 1;
-    transform: translateY(40px);
 
     @media (max-width: $breakpoint-desktop) {
       order: 2;
@@ -120,13 +119,11 @@ section#skills {
     gap: 16px;
     color: white;
     z-index: 1;
-    transform: translateY(40px);
 
     @media (max-width: $breakpoint-desktop) {
       order: 1;
       width: 100%;
       margin-bottom: 32px;
-      transform: none;
     }
 
     .headline {
