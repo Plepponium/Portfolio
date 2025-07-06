@@ -1,3 +1,5 @@
+// @import "~aos/dist/aos.css";
+
 $w: white;
 $g: #70e61c;
 $r: #e61c40;
@@ -15,15 +17,15 @@ $breakpoint-tablet: 768px;
 $breakpoint-mobile: 480px;
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('/assets/fonts/poppins.woff2') format('woff2');
+  font-family: "Poppins";
+  src: url("/assets/fonts/poppins.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('/assets/fonts/poppins-bold.woff2') format('woff2');
+  font-family: "Poppins";
+  src: url("/assets/fonts/poppins-bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
@@ -34,7 +36,7 @@ $breakpoint-mobile: 480px;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: $darkblue;
   color: $w;
   display: $f;
