@@ -33,37 +33,40 @@ export class ContactformComponent {
     this.nameTouched[field] = true;
   }
 
-
-
   mailTest = true;
 
   post = {
     endPoint: 'https://akleinschmidt.net/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
+      headers: { 'Content-Type': 'text/plain' },
+      responseType: 'text' as const
+    }
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+    if (ngForm.valid && !this.mailTest) {
+      this.http.post(
+        this.post.endPoint,
+        this.post.body(this.contactData),
+        this.post.options
+      ).subscribe({
+        next: (response) => {
+          ngForm.resetForm();
+          this.nameTouched = { name: false, email: false, message: false };
+        },
+        error: (error) => {
+          console.error('Senden fehlgeschlagen:', error);
+        },
+        complete: () => {
+          console.info('Send POST complete');
+        }
+      });
+    } else if (ngForm.valid && this.mailTest) {
+      console.info('MailTest aktiviert – keine E-Mail gesendet');
       ngForm.resetForm();
+      this.nameTouched = { name: false, email: false, message: false };
     }
   }
+
 }
