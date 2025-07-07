@@ -11,6 +11,7 @@ section#about-me {
 
   @media (max-width: $breakpoint-mobile) {
     padding: 80px 15px 15px;
+    scroll-margin-top: 40px;
   }
 
   .about-content-wrapper {
@@ -60,12 +61,23 @@ section#about-me {
 
       @media (max-width: $breakpoint-mobile) {
         font-size: 29px;
+        opacity: 1 !important;
+        transform: none !important;
       }
     }
     .info-content {
       width: 100%;
       margin-top: 16px;
       font-size: 16px;
+
+      span {
+        display: inline-block;
+        font-size: 20px;
+
+        @media (max-width: $breakpoint-1440p) {
+          font-size: 16px;
+        }
+      }
 
       table {
         margin-top: 16px;
@@ -80,6 +92,11 @@ section#about-me {
         td {
           vertical-align: top;
           text-align: left;
+          font-size: 20px;
+
+          @media (max-width: $breakpoint-1440p) {
+            font-size: 16px;
+          }
 
           img {
             width: 48px;
@@ -138,7 +155,7 @@ section#about-me {
 
       @media (max-width: $breakpoint-mobile) {
         object-fit: contain;
-        width: 520px;
+        width: 400px;
       }
     }
   }

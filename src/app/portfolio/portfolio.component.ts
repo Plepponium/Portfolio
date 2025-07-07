@@ -24,8 +24,8 @@ export class PortfolioComponent {
       name: 'Join',
       descriptionKey: 'portfolio.projects.join.description',
       tech: ['JavaScript', 'CSS', 'HTML'],
-      github: 'https://github.com/AlexAntalToth/JOIN---ToDo-Software',
-      live: 'https://join-398.developerakademie.net/'
+      github: 'https://github.com/Plepponium/JOIN',
+      live: 'https://join.akleinschmidt.net/'
     },
   ];
 

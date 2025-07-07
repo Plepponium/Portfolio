@@ -33,7 +33,7 @@ export class ContactformComponent {
     this.nameTouched[field] = true;
   }
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://akleinschmidt.net/sendMail.php',
