@@ -13,7 +13,7 @@
   },
   "about": {
     "headline": "Über mich",
-    "introductionText": "Ein guter Freund hat meine Leidenschaft für Technik erkannt und mich motiviert, mit dem Coden anzufangen – und siehe da, Probleme mit Code zu lösen fühlt sich an wie ein nie endendes Puzzle – und ich liebe es. Der ständige Wandel in der Tech-Welt hält mich jeden Tag neugierig und gefordert.\n\nLass uns vernetzen und gemeinsam etwas Großartiges schaffen!",
+    "introductionText": "Aus eigenem Antrieb habe ich begonnen, mich intensiv mit Technik und Code auseinanderzusetzen – ein guter Freund hat diesen Weg unterstützt, indem er meine Begeisterung erkannte und weiter bestärkte. Probleme mit Code zu lösen fühlt sich für mich an wie ein endloses Puzzle – und genau das fasziniert mich daran. Der ständige Wandel in der Tech-Welt hält mich täglich neugierig und fordert mich immer wieder neu heraus.\n\nLass uns vernetzen und gemeinsam etwas Großartiges schaffen!",
     "locationText": "Ich bin in Baden-Württemberg ansässig – offen für Remote-Arbeit, aber nicht umzugsbereit.",
     "learningText": "Ich bin immer neugierig auf neue Technologien und liebe es, meine Fähigkeiten weiterzuentwickeln.",
     "solvingText": "Bei der Problemlösung experimentiere ich zuerst und verfeinere dann meinen Ansatz. Auch wenn ich oft analytisch alleine arbeite, bin ich immer offen für Teamarbeit, wenn eine Herausforderung meine Fähigkeiten übersteigt. Ich glaube an eine Mischung aus Planung und praxisnahem Arbeiten."
@@ -33,7 +33,7 @@
         "description": "Jump-, Run- und Wurfspiel basierend auf objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
       },
       "join": {
-        "description": "Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag & Drop, weise Benutzern und Kategorien zu."
+        "description": "Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag & Drop, weise Benutzer und Kategorien zu."
       }
     }
   },
@@ -53,7 +53,6 @@
 
       "messagePlaceholder": "Deine Nachricht",
       "messageError": "Bitte gib mindestens 4 Zeichen ein",
-
 
       "privacyTextPart1": "Ich habe die",
       "privacyLinkText": "Datenschutzerklärung",
