@@ -64,13 +64,12 @@
 
   "imprint": {
     "title": "Legal Notice",
-    "lastUpdate": "Last update: March 2025",
+    "purpose": "This website is intended exclusively for private use, primarily as a digital application document. It does not contain any commercial offers, advertisements, or sales. If you wish, I will provide full contact information directly upon request.",
+    "lastUpdate": "Last update: July 2025",
     "provider": {
       "head": "Information pursuant to § 5 TMG",
       "name": "Adrian Kleinschmidt",
-      "street": "—",
-      "city": "79114 Freiburg",
-      "country": "Germany"
+      "location": "Freiburg im Breisgau, Deutschland "
     },
     "contact": { "head": "Contact" },
     "broadcast": { "head": "Responsible according to § 55 RStV" },
