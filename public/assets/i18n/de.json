@@ -74,7 +74,10 @@
     },
     "contact": { "head": "Kontakt" },
     "broadcast": { "head": "Verantwortlich i. S. d. § 55 Abs. 2 RStV" },
-    "hosting": { "head": "Hosting-Dienstleister" },
+    "hosting": {
+      "head": "Hosting-Dienstleister",
+      "location": "Friedersdorf, Deutschland"
+    },
     "os": {
       "head": "EU-Streitschlichtung",
       "text": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr."

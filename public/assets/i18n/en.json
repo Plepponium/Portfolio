@@ -69,11 +69,14 @@
     "provider": {
       "head": "Information pursuant to § 5 TMG",
       "name": "Adrian Kleinschmidt",
-      "location": "Freiburg im Breisgau, Deutschland "
+      "location": "Freiburg im Breisgau, Germany "
     },
     "contact": { "head": "Contact" },
     "broadcast": { "head": "Responsible according to § 55 RStV" },
-    "hosting": { "head": "Hosting Provider" },
+    "hosting": {
+      "head": "Hosting Provider",
+      "location": "Friedersdorf, Germany"
+    },
     "os": {
       "head": "EU Online Dispute Resolution",
       "text": "The European Commission provides a platform for online dispute resolution (ODR): https://ec.europa.eu/consumers/odr."
